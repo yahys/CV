@@ -242,7 +242,7 @@ function CV() {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
       <header className="mb-8 flex items-center">
-        <img src="path/to/your/photo.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
+        <img src="./images/IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
           <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
           <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
