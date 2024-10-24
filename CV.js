@@ -409,4 +409,10 @@ function CV() {
               </div>
             </div>
           ))}
-        </
+        </div>
+      </section>
+    </div>
+  );
+}
+
+ReactDOM.render(<CV />, document.getElementById('root'));
