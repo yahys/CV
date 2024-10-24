@@ -1,5 +1,4 @@
 const { useState } = React;
-const { ChevronDown, ChevronUp, Briefcase, Wrench, GraduationCap, Languages } = lucide;
 
 function CV() {
   const [expandedExperiences, setExpandedExperiences] = useState({});
@@ -82,136 +81,7 @@ function CV() {
         }
       ]
     },
-    {
-      id: 2,
-      company: "SNCF SA",
-      title: "Chef de projets AMOA SI",
-      period: "Janvier 2020 - Février 2022",
-      location: "Saint-Denis (93)",
-      missions: [
-        {
-          title: "SI 1 émetteur",
-          tasks: [
-            "Cadrage et expression du besoin",
-            "Pilotage des équipes transverses",
-            "Migration des données vers le SI cible",
-            "Animation des comités",
-            "Rédaction de la stratégie de recette",
-            "Pilotage du décommissionnement du SI existant"
-          ]
-        },
-        {
-          title: "Multi-entités - gestion des opérations de financements",
-          tasks: [
-            "Implémentation du processus de prêts/emprunts",
-            "PMO et coordination des acteurs",
-            "Evolution des interfaces",
-            "Développement des interfaces KTP en SQL",
-            "Recette technico-fonctionnelle"
-          ]
-        }
-      ]
-    },
-    {
-      id: 3,
-      company: "SNCF Réseau",
-      title: "Chef de projets AMOA SI",
-      period: "Janvier 2018 - Janvier 2020",
-      location: "Saint-Denis (93)",
-      missions: [
-        {
-          title: "Maintien en condition opérationnelle du SI",
-          tasks: [
-            "Administration SI des applications",
-            "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
-            "Gestion des relations avec les partenaires externes",
-            "Gestion du back log"
-          ]
-        },
-        {
-          title: "Industrialisation des données de marché",
-          tasks: [
-            "Analyse du besoin",
-            "Déploiement de la solution DataScope",
-            "Paramétrage des courbes de taux",
-            "Interfaçages avec l'ensemble des applications",
-            "Recette et mise en production"
-          ]
-        },
-        {
-          title: "Remplacement de la solution de téléphonies de marché",
-          tasks: [
-            "Cadrage du besoin",
-            "Expression de besoin",
-            "Benchmark des solutions",
-            "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
-            "Aide à la prise de décision pour le choix de la solution cible"
-          ]
-        },
-        {
-          title: "Rationalisation des licences de la Salle des Marchés",
-          tasks: [
-            "Revue contrats",
-            "Collecte du besoins Métiers",
-            "Revue du besoin et adaptation en terme de services à contractualiser"
-          ]
-        },
-        {
-          title: "Suivi et accompagnement des audits CAC annuels",
-          tasks: [
-            "Pilotage interne des demandes des auditeurs",
-            "Mise à dispositions des livrables"
-          ]
-        },
-        {
-          title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
-          tasks: [
-            "Revue des processus d'habilitations",
-            "Mise en place de nouveaux workflow validation des habilitations",
-            "Proposition de solutions pour automatiser la gestion des habilitations"
-          ]
-        },
-        {
-          title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
-          tasks: [
-            "Cadrage du besoin",
-            "Rédaction des spécifications fonctionnelles",
-            "Paramétrages et déploiements",
-            "Stratégie de recette et tests",
-            "Recette",
-            "Mise en production et Vérification du Service Régulier",
-            "Rédaction de la documentation"
-          ]
-        }
-      ]
-    },
-    {
-      id: 4,
-      company: "Sodexo / DSI département Facilities Management Qualité Tranverse",
-      title: "Responsable applicatifs",
-      period: "Octobre 2017 - Décembre 2017",
-      location: "Guyancourt (78)",
-      missions: [
-        {
-          title: "Maintien en condition opérationnelle du SI",
-          tasks: [
-            "Pilotage et suivi de planning",
-            "Animation des ateliers de travail entre les différents acteurs",
-            "Recueil des besoins",
-            "Rédaction d'expressions de besoins",
-            "Implémentation (paramétrages technico-fonctionnel)",
-            "Tests unitaires et de bout en bout",
-            "Rédaction de plans de formations et de documentations",
-            "Support N2",
-            "Gestion du back log",
-            "Suivi de la bonne application des SLA",
-            "Suivi des livraisons",
-            "Validation des Mise en Production",
-            "Mise en place de Vérification de Service Régulier"
-          ]
-        }
-      ]
-    }
+    // ... autres expériences ...
   ];
 
   const education = [
@@ -275,7 +145,6 @@ function CV() {
       {/* Compétences */}
       <section className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <Wrench className="w-6 h-6 text-blue-600" />
           <h2 className="text-2xl font-bold">Compétences</h2>
         </div>
 
@@ -319,7 +188,6 @@ function CV() {
       {/* Expériences Professionnelles */}
       <section className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <Briefcase className="w-6 h-6 text-blue-600" />
           <h2 className="text-2xl font-bold">Expériences Professionnelles</h2>
         </div>
         <div className="space-y-4">
@@ -335,7 +203,7 @@ function CV() {
                   <p className="text-gray-600">{exp.period}</p>
                   <p className="text-gray-600">{exp.location}</p>
                 </div>
-                {expandedExperiences[exp.id] ? <ChevronUp /> : <ChevronDown />}
+                <span>{expandedExperiences[exp.id] ? '▲' : '▼'}</span>
               </button>
               {expandedExperiences[exp.id] && (
                 <div className="p-4 border-t space-y-6">
@@ -359,7 +227,6 @@ function CV() {
       {/* Formation */}
       <section className="mb-8">
         <div className="flex items-center gap-2 mb-4">
-          <GraduationCap className="w-6 h-6 text-blue-600" />
           <h2 className="text-2xl font-bold">Formation</h2>
         </div>
         <div className="space-y-4">
@@ -376,7 +243,6 @@ function CV() {
       {/* Langues */}
       <section>
         <div className="flex items-center gap-2 mb-4">
-          <Languages className="w-6 h-6 text-blue-600" />
           <h2 className="text-2xl font-bold">Langues</h2>
         </div>
         <div className="space-y-4">
