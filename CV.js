@@ -17,8 +17,8 @@ function CV() {
       location: "Saint-Denis (93)",
       missions: [
         {
-          title: "Appui au support et évolutions du Treasury Management System",
-          description: "Pilotage d'un projet de décommissionnement du SI amont comptable (JD Edwards et migration vers PeopleSoft) alimentant l'application de Credit Management « Wynbe »",
+          title: "Appui au support et évolutions du Treasury Management System - Titantreasury",
+          description: "dans le cadre des activités de la Société du Grand Paris et au vu de ses besoins de financement, a été déployé au sein de son SI le progiciel Titan pour la gestion de sa dette, du risque et de sa trésorerie. L’objectif étant d’accompagner le Client pour maintenir la solution (évolutions et correctifs)",
           tasks: [
             "Cadrage des besoins",
             "Expression des besoin",
@@ -32,6 +32,8 @@ function CV() {
         },
         {
           title: "Déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
+          description: "La SGP Dev a été créée afin de valoriser les savoirs et savoir-faire acquis dans la conception et la réalisation du Grand Paris Express. Dans le cadre de ses missions, la filiale de la SGP avait exprimé le besoin de se doter d’un outil d’appui à la gestion financière",
+
           tasks: [
             "Cadrage des besoins",
             "Pilotage des équipes transverses internes et externes",
@@ -44,12 +46,14 @@ function CV() {
         },
         {
           title: "Sécurisation de l'actuelle ERP Qualiac",
+          description : "en pleine migration d’outil de gestion entre Qualiac vers SAP S4/HANA, des solutions paliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu’à la bascule",
           tasks: [
             "Solutions paliatives de secours pour garantir la continuité de service"
           ]
         },
         {
-          title: "Plan de Continuité Métiers",
+          title: "Plan de Continuité Métiers"
+          description : "déploiement d’un plan de gestion de crise en fonction de la criticité des flux des domaines Achats, Finance et Comptables pour permettre la continuité de service",
           tasks: [
             "Déploiement d'un plan de gestion de crise",
             "Analyse de la criticité des flux des domaines Achats, Finance et Comptables"
