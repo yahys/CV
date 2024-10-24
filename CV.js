@@ -213,6 +213,26 @@ function CV() {
           ]
         }
       ]
+    },
+    {
+      id: 5,
+      company: "American Express / Global Business Travel",
+      title: "Assistant Project Manager",
+      period: "Avril 2016 à Septembre 2016",
+      location: "Rueil-Malmaison (92)",
+      missions: [
+        {
+          title: "Organisation et planification d’évènements pour les leaders mondiaux des laboratoires pharmaceutiques",
+          tasks: [
+            "Pilotage et coordination des évènements à échelle internationale",
+            "Recueil et analyse des besoins",
+            "Négociation avec les parties prenantes",
+            "Organisation des appels d’offres",
+            "Logistique",
+            "Suivi des budgets et de la refacturation"
+          ]
+        }
+      ]
     }
   ];
 
@@ -254,6 +274,7 @@ function CV() {
         <img src="./IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
           <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
+          <a href="https://www.linkedin.com/in/yahyabenabdelkrim/" className="text-blue-600 underline">LinkedIn</a>
           <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
           <div className="text-gray-600">
             <p>+33 (0)6 99 23 32 20</p>
@@ -264,7 +285,7 @@ function CV() {
       </header>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Compétences</h2>
+        <h2 className="text-2xl font-bold mb-4">🛠️ Compétences</h2>
         <div className="mb-4">
           <h3 className="text-lg font-semibold mb-2">Compétences fonctionnelles</h3>
           <div className="flex flex-wrap gap-2">
@@ -295,7 +316,7 @@ function CV() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Expériences Professionnelles</h2>
+        <h2 className="text-2xl font-bold mb-4">💼 Expériences Professionnelles</h2>
         <div className="space-y-4">
           {experiences.map((exp) => (
             <div key={exp.id} className="border rounded-lg p-4">
@@ -329,7 +350,7 @@ function CV() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Formation</h2>
+        <h2 className="text-2xl font-bold mb-4">🎓 Formation</h2>
         <div className="space-y-4">
           {education.map((edu, index) => (
             <div key={index} className="p-4 bg-gray-50 rounded-lg">
@@ -342,7 +363,7 @@ function CV() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold mb-4">Langues</h2>
+        <h2 className="text-2xl font-bold mb-4">🌐 Langues</h2>
         <div className="space-y-4">
           {languages.map((item) => (
             <div key={item.lang} className="bg-white p-4 rounded-lg">
