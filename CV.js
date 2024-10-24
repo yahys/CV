@@ -280,7 +280,7 @@ function CV() {
             <p>✉️ Benabdelkrim.yahya@gmail.com</p>
             <p>📍 Boulogne-Billancourt</p>
             <p>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" className="inline w-4 h-4 mr-1" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" className="inline w-5 h-5 mr-1" />
               <a href="https://www.linkedin.com/in/yahyabenabdelkrim/" className="text-blue-600">LinkedIn</a>
             </p>
           </div>
