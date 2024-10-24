@@ -274,12 +274,15 @@ function CV() {
         <img src="./IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
           <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
-          <a href="https://www.linkedin.com/in/yahyabenabdelkrim/" className="text-blue-600 underline">LinkedIn</a>
-          <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
+          <h2 className="text-xl text-blue-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
           <div className="text-gray-600">
-            <p>+33 (0)6 99 23 32 20</p>
-            <p>Benabdelkrim.yahya@gmail.com</p>
-            <p>Boulogne-Billancourt</p>
+            <p>📞 +33 (0)6 99 23 32 20</p>
+            <p>✉️ Benabdelkrim.yahya@gmail.com</p>
+            <p>📍 Boulogne-Billancourt</p>
+            <p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" className="inline w-4 h-4 mr-1" />
+              <a href="https://www.linkedin.com/in/yahyabenabdelkrim/" className="text-blue-600">LinkedIn</a>
+            </p>
           </div>
         </div>
       </header>
