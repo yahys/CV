@@ -30,6 +30,18 @@ function CV() {
           ]
         },
         {
+          title: "Déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
+          tasks: [
+            "Cadrage des besoins",
+            "Pilotage des équipes transverses internes et externes",
+            "Animation des comités",
+            "Suivi du planning et communication",
+            "Rédaction de la stratégie de recette",
+            "Participation à la recette et animation des ateliers",
+            "Mise en production et Vérification du Service Régulier"
+          ]
+        },
+        {
           title: "Sécurisation de l'actuelle ERP Qualiac",
           tasks: [
             "Solutions paliatives de secours pour garantir la continuité de service"
@@ -229,13 +241,16 @@ function CV() {
 
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
-        <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
-        <div className="text-gray-600">
-          <p>+33 (0)6 99 23 32 20</p>
-          <p>Benabdelkrim.yahya@gmail.com</p>
-          <p>Boulogne-Billancourt</p>
+      <header className="mb-8 flex items-center">
+        <img src="path/to/your/photo.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
+        <div>
+          <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
+          <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
+          <div className="text-gray-600">
+            <p>+33 (0)6 99 23 32 20</p>
+            <p>Benabdelkrim.yahya@gmail.com</p>
+            <p>Boulogne-Billancourt</p>
+          </div>
         </div>
       </header>
 
