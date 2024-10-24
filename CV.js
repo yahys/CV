@@ -69,82 +69,87 @@ function CV() {
       missions: [
         {
           title: "SI 1 émetteur",
-          tasks: [
-            "Cadrage et expression du besoin",
-            "Pilotage des équipes transverses",
-            "Migration des données vers le SI cible",
-            "Animation des comités",
-            "Rédaction de la stratégie de recette",
-            "Pilotage du décommissionnement du SI existant"
-          ]
-        },
-        {
-          title: "Multi-entités - gestion des opérations de financements",
-          tasks: [
-            "Implémentation du processus de prêts/emprunts",
-            "PMO et coordination des acteurs",
-            "Evolution des interfaces",
-            "Développement des interfaces KTP en SQL",
-            "Recette technico-fonctionnelle"
-          ]
-        },
-        {
-          title: "Remplacement de la solution de téléphonies de marché",
+          description: "Suite à la Réforme Ferroviaire de 2020, l’objectif était d’adapté et déployé le SI en adéquation avec la politique d’avoir un seul émetteur sur les marchés financiers.",
           tasks: [
             "Cadrage du besoin",
             "Expression de besoin",
-            "Benchmark des solutions",
-            "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
-            "Aide à la prise de décision pour le choix de la solution cible"
-          ]
-        },
-        {
-          title: "Rationalisation des licences de la Salle des Marchés",
-          tasks: [
-            "Revue contrats",
-            "Collecte du besoins Métiers",
-            "Revue du besoin et adaptation en terme de services à contractualiser"
-          ]
-        },
-        {
-          title: "Suivi et accompagnement des audits CAC annuels",
-          tasks: [
-            "Pilotage interne des demandes des auditeurs",
-            "Mise à dispositions des livrables"
-          ]
-        },
-        {
-          title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
-          tasks: [
-            "Revue des processus d'habilitations",
-            "Mise en place de nouveaux workflow validation des habilitations",
-            "Proposition de solutions pour automatiser la gestion des habilitations"
-          ]
-        },
-        {
-          title: "Industrialisation des données de marché",
-          tasks: [
-            "Analyse du besoin",
-            "Rédaction des spécifications technico-fonctionnelles",
-            "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
-            "Paramétrage des courbes de taux, fixings dans les SI avals",
-            "Contractualisation avec les fournisseurs de données",
-            "Interfaçages avec l'ensemble des applications du SI",
-            "Stratégie de recette et tests",
-            "Recette",
+            "Pilotage des équipes transverses internes et externes",
+            "Animation des comités",
+            "Suivi du planning et communication auprès de la Direction des Systèmes d’Information et Direction Finance et Trésorerie",
+            "Migration des données vers le SI cible (référentiels, stock d’opérations)",
+            "Rédaction de la stratégie de recette",
+            "Participation à la recette et animation des ateliers",
+            "Pilotage du décommissionnement du SI existant (progiciels, interfaces, licences)",
             "Mise en production et Vérification du Service Régulier"
           ]
         },
         {
-          title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
+          title: "Multi-entités – gestion des opérations de financements entre la Holding et ses filiales",
+          description: "Implémentation du processus de prêts/emprunts et cashpooling entre la Holding et ses filiales dans KTP.",
           tasks: [
-            "Cadrage du besoin",
-            "Rédaction des spécifications fonctionnelles",
-            "Paramétrages et déploiements",
-            "Stratégie de recette et tests",
+            "Participation à l’expression de besoin",
+            "PMO (animation des comités, suivi de planning et respect des jalons, coordination des acteurs Métiers et techniques)",
+            "Evolution des interfaces avec les SI amonts et avals (Sage XRT, Sage Rappro, PeopleSoft GL)",
+            "Développement des interfaces KTP en SQL",
+            "Correction des anomalies",
+            "Rédaction de la stratégie de recette",
+            "Recette technico-fonctionnelle",
+            "Mise en production et Vérification du Service Régulier"
+          ]
+        },
+        {
+          title: "Automatisation du contrôle des risques financiers",
+          description: "Mise à disposition d’une solution reflétant la stratégie validée en Conseil d’Administration dans les outils permettant au Middle-Office d’avoir un outil unique pour le contrôle des risques financiers.",
+          tasks: [
+            "Paramétrage de DataScope : récupération des données financières pour alimenter TITAN",
+            "Modélisation des processus Métiers",
+            "Conception : développement ETL Xchange de 3V Finance",
+            "Rédaction de la documentation (livrables développés, processus Métiers)",
+            "Livraison du package",
             "Recette",
-            "Mise en production et Vérification du Service Régulier",
-            "Rédaction de la documentation"
+            "Mise en production",
+            "Vérification du Service Régulier"
+          ]
+        },
+        {
+          title: "Migration Saas TITAN",
+          description: "Dans le cadre du décommissionnement de l’infogérant dédié SI Trésorerie et Salle des Marchés, il y a eu une volonté de migrer les applications en Saas.",
+          tasks: [
+            "Rédaction du plan batch",
+            "Recette applicatives et des interfaces"
+          ]
+        },
+        {
+          title: "Migration des flux de paiements et de prévisions de trésorerie",
+          description: "Dans le cadre du décommissionnement de CashSolutions (centrale de paiements), migration des flux financiers et prévisions de trésorerie de TITAN à destination de Kyriba.",
+          tasks: [
+            "Etude d’impacts du changement de format de fichier bancaire (MT101 vers de l’AFB320/160) dans TITAN",
+            "Animation d’ateliers",
+            "Rédaction des spécifications techniques",
+            "Développement des nouveaux formats de fichiers bancaires l’AFB320/160 dans l’ETL Xchange",
+            "Développement de l’interface de prévisions de Trésorerie à destination de Kyriba",
+            "Recette",
+            "Communication avec les équipes (éditeurs, banques)"
+          ]
+        },
+        {
+          title: "Changement de la banque principale émettant les flux financiers",
+          description: "Changement du compte financier principal de SNCF SA.",
+          tasks: [
+            "Etude d’impacts",
+            "Animations des ateliers DSI/Métiers",
+            "Conception : Développements applicatifs et d’interfaces (paramétrages, SQL)",
+            "Recette"
+          ]
+        },
+        {
+          title: "Taux Risk free rates",
+          description: "Adaptation du SI dans le cadre du changement réglementaire des taux LIBOR.",
+          tasks: [
+            "Etude d’impacts",
+            "Evolution des outils (TITAN, KTP, DataScope) conjointement avec les éditeurs",
+            "Montée de version applicative de TITAN",
+            "Accompagnement à la recette fonctionnelle"
           ]
         }
       ]
@@ -246,7 +251,7 @@ function CV() {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
       <header className="mb-8 flex items-center">
-        <img src="./IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
+        <img src="./images/IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
           <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
           <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
