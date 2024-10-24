@@ -18,6 +18,7 @@ function CV() {
       missions: [
         {
           title: "Appui au support et évolutions du Treasury Management System",
+          description: "Pilotage d'un projet de décommissionnement du SI amont comptable (JD Edwards et migration vers PeopleSoft) alimentant l'application de Credit Management « Wynbe »",
           tasks: [
             "Cadrage des besoins",
             "Expression des besoin",
