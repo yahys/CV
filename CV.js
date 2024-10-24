@@ -156,8 +156,8 @@ function CV() {
     },
     {
       id: 3,
-      company: "Sodexo / DSI département Facilities Management Qualité Tranverse",
-      title: "Responsable applicatifs",
+      company: "Sodexo",
+      title: "Responsable applicatifs Facilities Management Qualité Tranverse",
       period: "Octobre 2017 à Décembre 2017",
       location: "Guyancourt (78)",
       missions: [
@@ -186,8 +186,8 @@ function CV() {
     },
     {
       id: 4,
-      company: "SNCF Réseau / DSI département Etudes Finances et Gestion",
-      title: "Consultant stagiaire AMOA SI",
+      company: "SNCF Réseau",
+      title: "Consultant stagiaire AMOA SI département Etudes Finances et Gestion",
       period: "Avril 2017 à Septembre 2017",
       location: "Saint-Denis (93)",
       missions: [
@@ -251,7 +251,7 @@ function CV() {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
       <header className="mb-8 flex items-center">
-        <img src="./images/IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
+        <img src="./IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
           <h1 className="text-3xl font-bold mb-2">Yahya BENABDELKRIM</h1>
           <h2 className="text-xl text-gray-600 mb-4">Chef de projets AMOA spécialisé en SI Finance & Trésorerie</h2>
