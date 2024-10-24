@@ -239,8 +239,8 @@ function CV() {
   const skills = {
     functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
     technical: {
-      finance: ["TITAN", "Qualiac", "SAP S4/HANA", "Serensia" "CASHSOLUTIONS", "KYRIBA", "Kondor Trade Processing (KTP)", "Business Objects", "Communications bancaires", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv, "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "Qualiac", "Open Trade", "Flex pro", "3SKEY""],
-      it: ["Bases de données, "ETL"]
+      finance: ["TITAN", "Qualiac", "SAP S4/HANA", "Serensia", "CASHSOLUTIONS", "KYRIBA", "Kondor Trade Processing (KTP)", "Business Objects", "Communications bancaires", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "Qualiac", "Open Trade", "Flex pro", "3SKEY"],
+      it: ["Bases de données", "ETL"]
     }
   };
 
@@ -249,6 +249,11 @@ function CV() {
       degree: "Master 2 Systèmes d'information pour la finance de marché",
       school: "Institut Mines Télécom (Business School) - Evry, France",
       period: "2013-2017"
+    },
+    {
+      degree: "Mentor Language Institute",
+      school: "Los Angeles, Etats-Unis",
+      period: "2015-2016"
     },
     {
       degree: "Classe Préparatoire aux Grandes Ecoles de Commerce ECT",
@@ -286,6 +291,27 @@ function CV() {
           </div>
         </div>
       </header>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">🔧 Niveaux d'interventions en conseil et AMOA</h2>
+        <ul className="list-disc pl-5 mb-4">
+          <li>Pilotage de projets</li>
+          <li>Coordination des équipes (multi-services, acteurs, interdépendances projets)</li>
+          <li>Méthodologie Projet</li>
+          <li>Expression de besoins : études préalables, études d’opportunités, spécifications fonctionnelles & élaboration de cahiers des charges fonctionnels</li>
+          <li>Recette fonctionnelle (stratégie, plan et cahier de recette, suivi et coordination)</li>
+          <li>Revue des processus métiers</li>
+          <li>Suivi de mise en production et support utilisateurs</li>
+          <li>Plan de formation et formation utilisateurs</li>
+        </ul>
+        <h3 className="text-lg font-semibold mb-2">Secteurs d'activités</h3>
+        <ul className="list-disc pl-5">
+          <li>Salle des marchés : financements court/long terme, opérations de couverture (dérivés), placements</li>
+          <li>Salle de trésorerie : cash management</li>
+          <li>Corporate</li>
+          <li>TPE / PME</li>
+        </ul>
+      </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">🛠️ Compétences</h2>
@@ -332,60 +358,4 @@ function CV() {
                 </div>
                 <span>{expandedExperiences[exp.id] ? '▲' : '▼'}</span>
               </div>
-              {expandedExperiences[exp.id] && (
-                <div className="mt-4">
-                  {exp.missions.map((mission, index) => (
-                    <div key={index} className="mb-4">
-                      <h4 className="font-semibold">{mission.title}</h4>
-                      {mission.description && <p className="text-gray-600 mb-2">{mission.description}</p>}
-                      <ul className="list-disc pl-5">
-                        {mission.tasks.map((task, taskIndex) => (
-                          <li key={taskIndex}>{task}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">🎓 Formation</h2>
-        <div className="space-y-4">
-          {education.map((edu, index) => (
-            <div key={index} className="p-4 bg-gray-50 rounded-lg">
-              <h3 className="font-bold text-blue-800">{edu.degree}</h3>
-              <p className="text-gray-600">{edu.period}</p>
-              <p>{edu.school}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-bold mb-4">🌐 Langues</h2>
-        <div className="space-y-4">
-          {languages.map((item) => (
-            <div key={item.lang} className="bg-white p-4 rounded-lg">
-              <div className="flex justify-between mb-1">
-                <span className="font-medium">{item.lang}</span>
-                <span className="text-gray-600">{item.level}</span>
-              </div>
-              <div className="w-full bg-gray-200 rounded h-2">
-                <div
-                  className="bg-blue-600 rounded h-2 transition-all duration-300"
-                  style={{ width: item.percent }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
-}
-
-ReactDOM.render(<CV />, document.getElementById('root'));
+              {expanded
