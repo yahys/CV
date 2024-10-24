@@ -1,14 +1,7 @@
-import { useState } from 'react';
-import { 
-  ChevronDown, 
-  ChevronUp,
-  Briefcase, 
-  Wrench, 
-  GraduationCap,
-  Languages
-} from 'lucide-react';
+const { useState } = React;
+const { ChevronDown, ChevronUp, Briefcase, Wrench, GraduationCap, Languages } = lucide;
 
-export default function CV() {
+function CV() {
   const [expandedExperiences, setExpandedExperiences] = useState({});
 
   const toggleExperience = (id) => {
@@ -406,3 +399,5 @@ export default function CV() {
     </div>
   );
 }
+
+ReactDOM.render(<CV />, document.getElementById('root'));
