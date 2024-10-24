@@ -71,9 +71,124 @@ function CV() {
             "Développement des interfaces KTP en SQL",
             "Recette technico-fonctionnelle"
           ]
+        },
+        {
+          title: "Remplacement de la solution de téléphonies de marché",
+          tasks: [
+            "Cadrage du besoin",
+            "Expression de besoin",
+            "Benchmark des solutions",
+            "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
+            "Aide à la prise de décision pour le choix de la solution cible"
+          ],
+          results: [
+            "Réduction des coûts",
+            "Mise en place d'une solution dématérialisée"
+          ]
+        },
+        {
+          title: "Rationalisation des licences de la Salle des Marchés",
+          tasks: [
+            "Revue contrats",
+            "Collecte du besoins Métiers",
+            "Revue du besoin et adaptation en terme de services à contractualiser"
+          ],
+          results: [
+            "Baisse considérable du budget des données de marché sur le 3 années suivantes"
+          ]
+        },
+        {
+          title: "Suivi et accompagnement des audits CAC annuels",
+          tasks: [
+            "Pilotage interne des demandes des auditeurs",
+            "Mise à dispositions des livrables"
+          ]
+        },
+        {
+          title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
+          tasks: [
+            "Revue des processus d'habilitations",
+            "Mise en place de nouveaux workflow validation des habilitations",
+            "Proposition de solutions pour automatiser la gestion des habilitations"
+          ],
+          results: [
+            "Harmonisation des processus d'habilitation",
+            "Fluidification des processus d'habilitation",
+            "Dématérialisation des processus d'habilitation"
+          ]
+        },
+        {
+          title: "Industrialisation des données de marché",
+          tasks: [
+            "Analyse du besoin",
+            "Rédaction des spécifications technico-fonctionnelles",
+            "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
+            "Paramétrage des courbes de taux, fixings dans les SI avals",
+            "Contractualisation avec les fournisseurs de données",
+            "Interfaçages avec l'ensemble des applications du SI",
+            "Stratégie de recette et tests",
+            "Recette",
+            "Mise en production et Vérification du Service Régulier"
+          ],
+          results: [
+            "Monitoring des traitements : réduction des incidents de production",
+            "Mise en conformité contractuelle avec les fournisseurs de données",
+            "Automatisation des traitements"
+          ]
+        },
+        {
+          title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
+          tasks: [
+            "Cadrage du besoin",
+            "Rédaction des spécifications fonctionnelles",
+            "Paramétrages et déploiements",
+            "Stratégie de recette et tests",
+            "Recette",
+            "Mise en production et Vérification du Service Régulier",
+            "Rédaction de la documentation"
+          ],
+          results: [
+            "Maintenabilité SI : simplification des règles de gestion",
+            "Baisse des coûts en termes de licences liée au décommissionnement",
+            "Transparent pour les équipes Métiers"
+          ]
         }
       ]
     },
+    {
+      id: 3,
+      company: "Sodexo / DSI département Facilities Management Qualité Tranverse",
+      title: "Responsable applicatifs",
+      period: "Octobre 2017 à Décembre 2017",
+      location: "Guyancourt (78)",
+      missions: [
+        {
+          title: "Maintien en condition opérationnelle du SI",
+          tasks: [
+            "Pilotage et suivi de planning",
+            "Animation des ateliers de travail entre les différents acteurs (MOA, éditeurs, Métiers)",
+            "Animations hebdomadaires d'ateliers",
+            "Recueil des besoins",
+            "Rédaction d'expressions de besoins",
+            "Implémentation (paramétrages technico-fonctionnel)",
+            "Tests unitaires et de bout en bout",
+            "Rédaction de plans de formations",
+            "Rédaction de documentations",
+            "Support N2",
+            "Gestion du back log",
+            "Suivi de la bonne application des SLA",
+            "Suivi des livraisons (versions, patch...)",
+            "Tests unitaires et de bout en bout des livraisons",
+            "Validation des Mise en Production",
+            "Mise en place de Vérification de Service Régulier"
+          ],
+          results: [
+            "Réduction des délais de déploiement",
+            "Sécurisation des livraisons faites par la MOE"
+          ]
+        }
+      ]
+    }
   ];
 
   const skills = {
@@ -175,6 +290,16 @@ function CV() {
                           <li key={taskIndex}>{task}</li>
                         ))}
                       </ul>
+                      {mission.results && (
+                        <div className="mt-2">
+                          <h5 className="font-medium">Résultats constatés :</h5>
+                          <ul className="list-disc pl-5">
+                            {mission.results.map((result, resultIndex) => (
+                              <li key={resultIndex}>{result}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
