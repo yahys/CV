@@ -325,7 +325,7 @@ function CV() {
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-2">Expertises techni-fonctionnelles</h3>
+          <h3 className="text-lg font-semibold mb-2">Expertises technico-fonctionnelles</h3>
           <div className="mb-2">
             <h4 className="font-medium">Finance & Trésorerie</h4>
             <div className="flex flex-wrap gap-2">
