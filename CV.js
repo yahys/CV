@@ -317,7 +317,7 @@ function CV() {
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4">🛠️ Compétences</h2>
         <div className="mb-4">
-          <h3 className="text-lg font-semibold mb-2">Compétences fonctionnelles</h3>
+          <h3 className="text-lg font-semibold mb-2">Expertises </h3>
           <div className="flex flex-wrap gap-2">
             {skills.functional.map((skill, index) => (
               <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">{skill}</span>
@@ -325,7 +325,7 @@ function CV() {
           </div>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-2">Compétences techniques</h3>
+          <h3 className="text-lg font-semibold mb-2">Expertises techni-fonctionnelles</h3>
           <div className="mb-2">
             <h4 className="font-medium">Finance & Trésorerie</h4>
             <div className="flex flex-wrap gap-2">
