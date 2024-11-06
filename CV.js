@@ -269,7 +269,7 @@ function CV() {
 
   const languages = [
     { lang: "Français", level: "Langue maternelle", percent: "100%" },
-    { lang: "Anglais", level: "B2", percent: "80%" },
+    { lang: "Anglais", level: "C1", percent: "80%" },
     { lang: "Espagnol", level: "Intermédiaire", percent: "60%" }
   ];
 
