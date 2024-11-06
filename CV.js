@@ -31,7 +31,7 @@ function CV() {
           ]
         },
         {
-          title: "Déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
+          title: "Pilotage et AMOA dans le cadre du projet de déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
           description: "La SGP Dev a été créée afin de valoriser les savoirs et savoir-faire acquis dans la conception et la réalisation du Grand Paris Express. Dans le cadre de ses missions, la filiale de la SGP avait exprimé le besoin de se doter d’un outil d’appui à la gestion financière",
           tasks: [
             "Cadrage des besoins",
@@ -45,13 +45,13 @@ function CV() {
         },
         {
           title: "Sécurisation de l'actuelle ERP Qualiac",
-          description: "En pleine migration d’outil de gestion entre Qualiac vers SAP S4/HANA, des solutions paliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu’à la bascule",
+          description: "En pleine migration d’outil de gestion entre Qualiac vers SAP S4/HANA, des solutions palliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu’à la bascule",
           tasks: [
-            "Solutions paliatives de secours pour garantir la continuité de service"
+            "Solutions palliatives de secours pour garantir la continuité de service"
           ]
         },
         {
-          title: "Plan de Continuité Métiers",
+          title: "Plan de Continuité Métiers (PCM)",
           description: "Déploiement d’un plan de gestion de crise en fonction de la criticité des flux des domaines Achats, Finance et Comptables pour permettre la continuité de service",
           tasks: [
             "Déploiement d'un plan de gestion de crise",
@@ -239,8 +239,8 @@ function CV() {
   const skills = {
     functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
     technical: {
-      finance: ["CASHSOLUTIONS", "KYRIBA", "TITAN", "Kondor Trade Processing", "Business Objects", "Communications bancaires", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv"],
-      it: ["BDD : Oracle, MySQL", "ETL : Xchange", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "Qualiac", "Open Trade", "Flex pro", "3SKEY"]
+      finance: ["TITANTreasury", "Kondor Trade Processing (KTP)", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "CASHSOLUTIONS", "KYRIBA",  "Communications bancaires", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "SAP 4/HANA", "Qualiac", "Open Trade", "Flex pro", "3SKEY", "Business Objects"],
+      it: ["Base de données", "ETL","Ticketing"]
     }
   };
 
