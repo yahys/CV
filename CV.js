@@ -282,6 +282,12 @@ function CV() {
       period: "2010-2011"
     }
   ];
+  
+  const languages = [
+    { lang: "Français", level: "Langue maternelle", percent: "100%" },
+    { lang: "Anglais", level: "C1", percent: "80%" },
+    { lang: "Espagnol", level: "Intermédiaire", percent: "60%" }
+  ];
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
       <header className="mb-8 flex items-center">
@@ -435,9 +441,3 @@ function CV() {
 }
 
 ReactDOM.render(<CV />, document.getElementById('root'));
-
-  const languages = [
-    { lang: "Français", level: "Langue maternelle", percent: "100%" },
-    { lang: "Anglais", level: "C1", percent: "80%" },
-    { lang: "Espagnol", level: "Intermédiaire", percent: "60%" }
-  ];
