@@ -18,7 +18,7 @@ function CV() {
       missions: [
         {
           title: "Appui au support et évolutions du Treasury Management System - Titantreasury",
-          description: "Dans le cadre des activités de la Société du Grand Paris et au vu de ses besoins de financement, a été déployé au sein de son SI le progiciel Titan pour la gestion de sa dette, du risque et de sa trésorerie. L’objectif étant d’accompagner le Client pour maintenir la solution (évolutions et correctifs)",
+          description: "Dans le cadre des activités de la Société du Grand Paris et au vu de ses besoins de financement, a été déployé au sein de son SI le progiciel Titan pour la gestion de sa dette, du risque et de sa trésorerie. L'objectif étant d'accompagner le Client pour maintenir la solution (évolutions et correctifs)",
           tasks: [
             "Cadrage des besoins",
             "Expression des besoin",
@@ -27,10 +27,11 @@ function CV() {
             "Suivi du planning et communication",
             "Rédaction de la stratégie de recette",
             "Participation à la recette et animation des ateliers",
-            "Mise en production et Vérification du Service Régulier"
-            Quelques cas d'usages : gestion des frais financiers prévisionnels, déploiement du module de comptabilité auxiliaire, refonte des interfaces comptables vers SAP, refonte de l'interface de prévisions court/moyen/long terme, gestion des prêts intragroupe..."
+            "Mise en production et Vérification du Service Régulier",
+            "Quelques cas d'usages : gestion des frais financiers prévisionnels, déploiement du module de comptabilité auxiliaire, refonte des interfaces comptables vers SAP, refonte de l'interface de prévisions court/moyen/long terme, gestion des prêts intragroupe..."
           ]
         },
+        // ... reste du code inchangé
         {
           title: "Pilotage et AMOA dans le cadre du projet de déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
           description: "La SGP Dev a été créée afin de valoriser les savoirs et savoir-faire acquis dans la conception et la réalisation du Grand Paris Express. Dans le cadre de ses missions, la filiale de la SGP avait exprimé le besoin de se doter d’un outil d’appui à la gestion financière",
