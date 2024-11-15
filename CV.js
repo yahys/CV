@@ -28,6 +28,7 @@ function CV() {
             "Rédaction de la stratégie de recette",
             "Participation à la recette et animation des ateliers",
             "Mise en production et Vérification du Service Régulier"
+            Quelques cas d'usages : gestion des frais financiers prévisionnels, déploiement du module de comptabilité auxiliaire, refonte des interfaces comptables vers SAP, refonte de l'interface de prévisions court/moyen/long terme, gestion des prêts intragroupe"
           ]
         },
         {
