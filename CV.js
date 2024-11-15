@@ -77,7 +77,7 @@ function CV() {
         }
       ]
     },
-    // Reste des expériences identique au code précédent
+    // Reste des expériences identiques
   ];
 
   const skills = {
@@ -255,19 +255,4 @@ function CV() {
                 <span className="font-medium">{item.lang}</span>
                 <span className="text-gray-600">{item.level}</span>
               </div>
-              <div className="w-full bg-gray-200 rounded h-2">
-                <div
-                  className="bg-blue-600 rounded h-2 transition-all duration-300"
-                  style={{ width: item.percent }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<CV />);
+              <div className="w-full bg-gray-
