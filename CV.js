@@ -44,6 +44,14 @@ function CV() {
             "Mise en production et Vérification du Service Régulier"
           ]
         },
+                {
+          title: "Optimisation de la gestion des irritants fournisseurs",
+          description: "Dans le cadre de l’amélioration de la chaîne de dépense des domaines finance et comptabilité, notamment pour le suivi des paiements fournisseurs et des engagements, un audit des processus métiers a été initié. L’objectif est de réduire et d’anticiper les irritants rencontrés aussi bien en interne qu’en externe. Ce dispositif repose à la fois sur le renforcement des ressources humaines et sur la mise en place d’un processus structuré et outillé, visant à automatiser, fiabiliser et contrôler efficacement les tâches, afin de gagner en agilité et en performance opérationnelle",
+          tasks: [
+            "Cadrage des besoins",
+            "Conception de la solution"
+          ]
+        },
         {
           title: "Sécurisation de l'actuelle ERP Qualiac",
           description: "En pleine migration d’outil de gestion entre Qualiac vers SAP S4/HANA, des solutions palliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu’à la bascule",
