@@ -77,7 +77,7 @@ function CV() {
         }
       ]
     },
-    // ... autres expériences identiques au code précédent
+    // Reste des expériences identique au code précédent
   ];
 
   const skills = {
@@ -137,9 +137,137 @@ function CV() {
         </div>
       </header>
 
-      {/* Reste du JSX identique au code précédent */}
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">🔧 Niveaux d'interventions en conseil et AMOA</h2>
+        <ul className="list-disc pl-5 mb-4">
+          <li>Pilotage de projets</li>
+          <li>Coordination des équipes (multi-services, acteurs, interdépendances projets)</li>
+          <li>Méthodologie Projet</li>
+          <li>Expression de besoins : études préalables, études d'opportunités, spécifications fonctionnelles & élaboration de cahiers des charges fonctionnels</li>
+          <li>Recette fonctionnelle (stratégie, plan et cahier de recette, suivi et coordination)</li>
+          <li>Revue des processus métiers</li>
+          <li>Suivi de mise en production et support utilisateurs</li>
+          <li>Plan de formation et formation utilisateurs</li>
+        </ul>
+        <h3 className="text-lg font-semibold mb-2">Secteurs d'activités</h3>
+        <ul className="list-disc pl-5">
+          <li>Salle des marchés : financements court/long terme, opérations de couverture (dérivés), placements</li>
+          <li>Salle de trésorerie : cash management</li>
+          <li>Corporate</li>
+          <li>TPE / PME</li>
+        </ul>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">🛠️ Compétences</h2>
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-2">Expertises </h3>
+          <div className="flex flex-wrap gap-2">
+            {skills.functional.map((skill, index) => (
+              <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">{skill}</span>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Expertises technico-fonctionnelles</h3>
+          <div className="mb-2">
+            <h4 className="font-medium">Finance & Trésorerie</h4>
+            <div className="flex flex-wrap gap-2">
+              {skills.technical.finance.map((skill, index) => (
+                <span key={index} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">{skill}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h4 className="font-medium">IT & SI</h4>
+            <div className="flex flex-wrap gap-2">
+              {skills.technical.it.map((skill, index) => (
+                <span key={index} className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">{skill}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">💼 Expériences Professionnelles</h2>
+        <div className="space-y-4">
+          {experiences.map((exp) => (
+            <div key={exp.id} className="border rounded-lg p-4">
+              <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleExperience(exp.id)}>
+                <div>
+                  <h3 className="font-bold">{exp.company}</h3>
+                  <p className="text-lg">{exp.title}</p>
+                  <p className="text-gray-600">{exp.period}</p>
+                  <p className="text-gray-600">{exp.location}</p>
+                </div>
+                <span>{expandedExperiences[exp.id] ? '▲' : '▼'}</span>
+              </div>
+              {expandedExperiences[exp.id] && (
+                <div className="mt-4">
+                  {exp.missions.map((mission, index) => (
+                    <div key={index} className="mb-4">
+                      <h4 className="font-semibold">{mission.title}</h4>
+                      {mission.description && <p className="text-gray-600 mb-2">{mission.description}</p>}
+                      <ul className="list-disc pl-5">
+                        {mission.tasks.map((task, taskIndex) => (
+                          <li key={taskIndex}>{task}</li>
+                        ))}
+                      </ul>
+                      {mission.useCases && (
+                        <div className="mt-2">
+                          <h5 className="font-medium text-gray-700">Cas d'usage :</h5>
+                          <ul className="list-disc pl-5">
+                            {mission.useCases.map((useCase, useCaseIndex) => (
+                              <li key={useCaseIndex} className="text-gray-600">{useCase}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">🎓 Formation</h2>
+        <div className="space-y-4">
+          {education.map((edu, index) => (
+            <div key={index} className="p-4 bg-gray-50 rounded-lg">
+              <h3 className="font-bold text-blue-800">{edu.degree}</h3>
+              <p className="text-gray-600">{edu.period}</p>
+              <p>{edu.school}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-bold mb-4">🌐 Langues</h2>
+        <div className="space-y-4">
+          {languages.map((item) => (
+            <div key={item.lang} className="bg-white p-4 rounded-lg">
+              <div className="flex justify-between mb-1">
+                <span className="font-medium">{item.lang}</span>
+                <span className="text-gray-600">{item.level}</span>
+              </div>
+              <div className="w-full bg-gray-200 rounded h-2">
+                <div
+                  className="bg-blue-600 rounded h-2 transition-all duration-300"
+                  style={{ width: item.percent }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
 
-export default CV;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CV />);
