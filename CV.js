@@ -12,7 +12,7 @@ function CV() {
     {
       id: 1,
       company: "Société des Grands Projets (ex-Société du Grand Paris)",
-      title: "Chef de projets AMOA SI du domaine Achats Gestion",
+      title: "Chef de projets AMOA SI (Finance de marché) du domaine Achats Gestion",
       period: "Mars 2022 - Present",
       location: "Saint-Denis (93)",
       missions: [
@@ -80,7 +80,7 @@ function CV() {
     {
       id: 2,
       company: "SNCF SA",
-      title: "Chef de projets AMOA SI",
+      title: "Chef de projets AMOA SI Dettes & Financements",
       period: "Janvier 2020 - Février 2022",
       location: "Saint-Denis (93)",
       missions: [
@@ -173,8 +173,8 @@ function CV() {
     },
 {
   id: 3,
-  company: "SNCF Réseau / DSI département EDT",
-  title: "Chef de projets AMOA SI",
+  company: "SNCF Réseau",
+  title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
   period: "Janvier 2018 - Janvier 2020",
   location: "Saint-Denis (93)",
   missions: [
