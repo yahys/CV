@@ -61,6 +61,15 @@ function CV() {
           ]
         },
         {
+          title: "Résilience SI de la Salle des Marchés (PRA/PCA)",
+          description: "Assurer la continuité des activités critiques, prévenir et/ou minimiser les impacts financiers et extra-financiers, et garantir le respect des obligations en interne comme en externe en cas d'incident majeur.",
+          tasks: [
+            "Collecte du besoin",
+            "Audit de l'existant",
+            "Conception de la cible",
+          ]
+        },
+        {
           title: "Sécurisation de l'actuelle ERP Qualiac",
           description: "En pleine migration d'outil de gestion entre Qualiac vers SAP S4/HANA, des solutions palliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu'à la bascule",
           tasks: [
