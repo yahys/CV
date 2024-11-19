@@ -171,8 +171,92 @@ function CV() {
         }
       ]
     },
+{
+  id: 3,
+  company: "SNCF Réseau / DSI département EDT",
+  title: "Chef de projets AMOA SI",
+  period: "Janvier 2018 - Janvier 2020",
+  location: "Saint-Denis (93)",
+  missions: [
     {
-      id: 3,
+      title: "Maintien en condition opérationnelle du SI",
+      tasks: [
+        "Administration SI des applications",
+        "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
+        "Gestion des relations avec les partenaires externes (éditeurs, banques)",
+        "Gestion du back log"
+      ]
+    },
+    {
+      title: "Remplacement de la solution credit management",
+      tasks: [
+        "Benchmark des solutions de credit management en remplacement de la solution en place",
+        "Lancement d'un Request For Information"
+      ]
+    },
+    {
+      title: "Remplacement de la solution de téléphonies de marché",
+      tasks: [
+        "Cadrage du besoin",
+        "Expression de besoin",
+        "Benchmark des solutions",
+        "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
+        "Aide à la prise de décision pour le choix de la solution cible"
+      ]
+    },
+    {
+      title: "Rationalisation des licences de la Salle des Marchés",
+      tasks: [
+        "Revue contrats",
+        "Collecte du besoins Métiers",
+        "Revue du besoin et adaptation en terme de services à contractualiser"
+      ]
+    },
+    {
+      title: "Suivi et accompagnement des audits CAC annuels",
+      tasks: [
+        "Pilotage interne des demandes des auditeurs",
+        "Mise à dispositions des livrables"
+      ]
+    },
+    {
+      title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
+      tasks: [
+        "Revue des processus d'habilitations",
+        "Mise en place de nouveaux workflow validation des habilitations",
+        "Proposition de solutions pour automatiser la gestion des habilitations"
+      ]
+    },
+    {
+      title: "Industrialisation des données de marché",
+      tasks: [
+        "Analyse du besoin",
+        "Rédaction des spécifications technico-fonctionnelles",
+        "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
+        "Paramétrage des courbes de taux, fixings dans les SI avals",
+        "Contractualisation avec les fournisseurs de données",
+        "Interfaçages avec l'ensemble des applications du SI",
+        "Stratégie de recette et tests",
+        "Recette",
+        "Mise en production et Vérification du Service Régulier"
+      ]
+    },
+    {
+      title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
+      tasks: [
+        "Cadrage du besoin",
+        "Rédaction des spécifications fonctionnelles",
+        "Paramétrages et déploiements",
+        "Stratégie de recette et tests",
+        "Recette",
+        "Mise en production et Vérification du Service Régulier",
+        "Rédaction de la documentation"
+      ]
+    }
+  ]
+},
+    {
+      id: 4,
       company: "Sodexo",
       title: "Responsable applicatifs Facilities Management Qualité Tranverse",
       period: "Octobre 2017 à Décembre 2017",
@@ -202,7 +286,7 @@ function CV() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       company: "SNCF Réseau",
       title: "Consultant stagiaire AMOA SI département Etudes Finances et Gestion",
       period: "Avril 2017 à Septembre 2017",
@@ -232,7 +316,7 @@ function CV() {
       ]
     },
     {
-      id: 5,
+      id: 6,
       company: "American Express / Global Business Travel",
       title: "Assistant Project Manager",
       period: "Avril 2016 à Septembre 2016",
