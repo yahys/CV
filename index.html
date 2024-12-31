@@ -9,8 +9,19 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div id="root"></div>
+<body class="bg-gray-100">
+    <div id="root" class="flex flex-col items-center justify-center min-h-screen">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">CV de Yahya BENABDELKRIM</h1>
+            <p class="text-gray-600">Bienvenue ! Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous.</p>
+        </div>
+        <a href="cv.pdf" download>
+            <button class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+                Télécharger mon CV
+            </button>
+        </a>
+    </div>
+    
     <script src="CV.js" type="text/babel"></script>
 </body>
 </html>
