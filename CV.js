@@ -1,14 +1,5 @@
 function CV() {
   const [expandedExperiences, setExpandedExperiences] = React.useState({});
-  const [isPrinting, setIsPrinting] = React.useState(false);
-
-  const handlePrint = () => {
-    setIsPrinting(true);
-    setTimeout(() => {
-      window.print();
-      setIsPrinting(false);
-    }, 100);
-  };
 
   const toggleExperience = (id) => {
     setExpandedExperiences(prev => ({
@@ -189,90 +180,90 @@ function CV() {
         }
       ]
     },
+{
+  id: 3,
+  company: "SNCF Réseau",
+  title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
+  period: "Janvier 2018 - Janvier 2020",
+  location: "Saint-Denis (93)",
+  missions: [
     {
-      id: 3,
-      company: "SNCF Réseau",
-      title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
-      period: "Janvier 2018 - Janvier 2020",
-      location: "Saint-Denis (93)",
-      missions: [
-        {
-          title: "Maintien en condition opérationnelle du SI",
-          tasks: [
-            "Administration SI des applications",
-            "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
-            "Gestion des relations avec les partenaires externes (éditeurs, banques)",
-            "Gestion du back log"
-          ]
-        },
-        {
-          title: "Remplacement de la solution credit management",
-          tasks: [
-            "Benchmark des solutions de credit management en remplacement de la solution en place",
-            "Lancement d'un Request For Information"
-          ]
-        },
-        {
-          title: "Remplacement de la solution de téléphonies de marché",
-          tasks: [
-            "Cadrage du besoin",
-            "Expression de besoin",
-            "Benchmark des solutions",
-            "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
-            "Aide à la prise de décision pour le choix de la solution cible"
-          ]
-        },
-        {
-          title: "Rationalisation des licences de la Salle des Marchés",
-          tasks: [
-            "Revue contrats",
-            "Collecte du besoins Métiers",
-            "Revue du besoin et adaptation en terme de services à contractualiser"
-          ]
-        },
-        {
-          title: "Suivi et accompagnement des audits CAC annuels",
-          tasks: [
-            "Pilotage interne des demandes des auditeurs",
-            "Mise à dispositions des livrables"
-          ]
-        },
-        {
-          title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
-          tasks: [
-            "Revue des processus d'habilitations",
-            "Mise en place de nouveaux workflow validation des habilitations",
-            "Proposition de solutions pour automatiser la gestion des habilitations"
-          ]
-        },
-        {
-          title: "Industrialisation des données de marché",
-          tasks: [
-            "Analyse du besoin",
-            "Rédaction des spécifications technico-fonctionnelles",
-            "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
-            "Paramétrage des courbes de taux, fixings dans les SI avals",
-            "Contractualisation avec les fournisseurs de données",
-            "Interfaçages avec l'ensemble des applications du SI",
-            "Stratégie de recette et tests",
-            "Recette",
-            "Mise en production et Vérification du Service Régulier"
-          ]
-        },
-        {
-          title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
-          tasks: [
-            "Cadrage du besoin",
-            "Rédaction des spécifications fonctionnelles",
-            "Paramétrages et déploiements",
-            "Stratégie de recette et tests",
-            "Recette",
-            "Mise en production et Vérification du Service Régulier",
-            "Rédaction de la documentation"
-          ]
-        }
+      title: "Maintien en condition opérationnelle du SI",
+      tasks: [
+        "Administration SI des applications",
+        "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
+        "Gestion des relations avec les partenaires externes (éditeurs, banques)",
+        "Gestion du back log"
       ]
     },
+    {
+      title: "Remplacement de la solution credit management",
+      tasks: [
+        "Benchmark des solutions de credit management en remplacement de la solution en place",
+        "Lancement d'un Request For Information"
+      ]
+    },
+    {
+      title: "Remplacement de la solution de téléphonies de marché",
+      tasks: [
+        "Cadrage du besoin",
+        "Expression de besoin",
+        "Benchmark des solutions",
+        "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
+        "Aide à la prise de décision pour le choix de la solution cible"
+      ]
+    },
+    {
+      title: "Rationalisation des licences de la Salle des Marchés",
+      tasks: [
+        "Revue contrats",
+        "Collecte du besoins Métiers",
+        "Revue du besoin et adaptation en terme de services à contractualiser"
+      ]
+    },
+    {
+      title: "Suivi et accompagnement des audits CAC annuels",
+      tasks: [
+        "Pilotage interne des demandes des auditeurs",
+        "Mise à dispositions des livrables"
+      ]
+    },
+    {
+      title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
+      tasks: [
+        "Revue des processus d'habilitations",
+        "Mise en place de nouveaux workflow validation des habilitations",
+        "Proposition de solutions pour automatiser la gestion des habilitations"
+      ]
+    },
+    {
+      title: "Industrialisation des données de marché",
+      tasks: [
+        "Analyse du besoin",
+        "Rédaction des spécifications technico-fonctionnelles",
+        "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
+        "Paramétrage des courbes de taux, fixings dans les SI avals",
+        "Contractualisation avec les fournisseurs de données",
+        "Interfaçages avec l'ensemble des applications du SI",
+        "Stratégie de recette et tests",
+        "Recette",
+        "Mise en production et Vérification du Service Régulier"
+      ]
+    },
+    {
+      title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
+      tasks: [
+        "Cadrage du besoin",
+        "Rédaction des spécifications fonctionnelles",
+        "Paramétrages et déploiements",
+        "Stratégie de recette et tests",
+        "Recette",
+        "Mise en production et Vérification du Service Régulier",
+        "Rédaction de la documentation"
+      ]
+    }
+  ]
+},
     {
       id: 4,
       company: "Sodexo",
@@ -354,7 +345,6 @@ function CV() {
       ]
     }
   ];
-
   const skills = {
     functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
     technical: {
@@ -391,28 +381,8 @@ function CV() {
     { lang: "Anglais", level: "C1", percent: "80%" },
     { lang: "Espagnol", level: "Intermédiaire", percent: "60%" }
   ];
-
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white">
-      <style>
-        {`
-          @media print {
-            @page { margin: 20mm; }
-            .no-print { display: none !important; }
-            body { -webkit-print-color-adjust: exact !important; }
-          }
-        `}
-      </style>
-      
-      <div className="no-print flex justify-end mb-4">
-        <button 
-          onClick={handlePrint}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >
-          📥 Télécharger PDF
-        </button>
-      </div>
-
       <header className="mb-8 flex items-center">
         <img src="./IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-32 h-32 rounded-full mr-8 object-cover" />
         <div>
@@ -495,9 +465,9 @@ function CV() {
                   <p className="text-gray-600">{exp.period}</p>
                   <p className="text-gray-600">{exp.location}</p>
                 </div>
-                <span className="no-print">{expandedExperiences[exp.id] ? '▲' : '▼'}</span>
+                <span>{expandedExperiences[exp.id] ? '▲' : '▼'}</span>
               </div>
-              {(expandedExperiences[exp.id] || isPrinting) && (
+              {expandedExperiences[exp.id] && (
                 <div className="mt-4">
                   {exp.missions.map((mission, index) => (
                     <div key={index} className="mb-4">
@@ -563,4 +533,4 @@ function CV() {
   );
 }
 
-export default CV;
+ReactDOM.render(<CV />, document.getElementById('root'));
