@@ -28,6 +28,13 @@ function CV() {
             "Rédaction de la stratégie de recette",
             "Participation à la recette et animation des ateliers",
             "Mise en production et Vérification du Service Régulier"
+          ],
+          useCases: [
+            "Gestion des frais financiers prévisionnels",
+            "Déploiement du module de comptabilité auxiliaire",
+            "Refonte des interfaces comptables vers SAP",
+            "Refonte de l'interface de prévisions court/moyen/long terme",
+            "Gestion des prêts intragroupes"
           ]
         },
         {
@@ -41,13 +48,6 @@ function CV() {
             "Rédaction de la stratégie de recette",
             "Participation à la recette et animation des ateliers",
             "Mise en production et Vérification du Service Régulier"
-          ],
-          useCases: [
-            "Gestion des frais financiers prévisionnels",
-            "Déploiement du module de comptabilité auxiliaire",
-            "Refonte des interfaces comptables vers SAP",
-            "Refonte de l'interface de prévisions court/moyen/long terme",
-            "Gestion des prêts intragroupes"
           ]
         },
         {
