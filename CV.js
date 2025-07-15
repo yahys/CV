@@ -569,4 +569,4 @@ function CV() {
   );
 }
 
-export default CV;
+ReactDOM.render(<CV />, document.getElementById('root'));
