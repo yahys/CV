@@ -11,6 +11,42 @@ function CV() {
   const experiences = [
     {
       id: 1,
+      company: "Consultant Stratégie & Innovation",
+      title: "Consultant Stratégie & Innovation",
+      period: "Mars 2025 - Présent",
+      location: "Ville de Paris, Île-de-France, France",
+      missions: [
+        {
+          title: "Accompagnement stratégique d'un projet innovant mêlant intelligence artificielle (IA), marketing digital et systèmes d'information",
+          description: "",
+          tasks: [
+            "Définition de la stratégie IA : identification des cas d'usage, cadrage des MVP, choix technologiques",
+            "Élaboration de la stratégie marketing : positionnement, messages clés, stratégie d'acquisition",
+            "Pilotage global du projet : structuration des phases, roadmap produit, coordination transverse"
+          ]
+        }
+      ]
+    },
+    {
+      id: 2,
+      company: "Éditeur de logiciels Treasury Management System (TMS)",
+      title: "Consultant AMOA SI pour un Éditeur de logiciels Treasury Management System (TMS)",
+      period: "Février 2025",
+      location: "Ville de Paris, Île-de-France, France",
+      missions: [
+        {
+          title: "Production des livrables projets dans le cadre du déploiement d'un Treasury Management System (TMS), de la phase de cadrage jusqu'au run",
+          description: "",
+          tasks: [
+            "Rédaction des documents clés basés sur les standards PMP (Plan de Management de Projet, gouvernance, gestion des risques, conduite du changement, stratégie de déploiement, etc.)",
+            "Structuration de l'ensemble des livrables projet pour encadrer le cycle de vie complet de l'implémentation",
+            "Collaboration étroite avec la direction projet et les équipes techniques de l'éditeur"
+          ]
+        }
+      ]
+    },
+    {
+      id: 3,
       company: "Société des Grands Projets (ex-Société du Grand Paris)",
       title: "Chef de projets AMOA SI (Finance de marché) du domaine Achats Gestion",
       period: "Mars 2022 - Present",
@@ -87,7 +123,7 @@ function CV() {
       ]
     },
     {
-      id: 2,
+      id: 4,
       company: "SNCF SA",
       title: "Chef de projets AMOA SI Dettes & Financements",
       period: "Janvier 2020 - Février 2022",
@@ -181,7 +217,7 @@ function CV() {
       ]
     },
 {
-  id: 3,
+  id: 5,
   company: "SNCF Réseau",
   title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
   period: "Janvier 2018 - Janvier 2020",
@@ -265,7 +301,7 @@ function CV() {
   ]
 },
     {
-      id: 4,
+      id: 6,
       company: "Sodexo",
       title: "Responsable applicatifs Facilities Management Qualité Tranverse",
       period: "Octobre 2017 à Décembre 2017",
@@ -295,7 +331,7 @@ function CV() {
       ]
     },
     {
-      id: 5,
+      id: 7,
       company: "SNCF Réseau",
       title: "Consultant stagiaire AMOA SI département Etudes Finances et Gestion",
       period: "Avril 2017 à Septembre 2017",
@@ -325,7 +361,7 @@ function CV() {
       ]
     },
     {
-      id: 6,
+      id: 8,
       company: "American Express / Global Business Travel",
       title: "Assistant Project Manager",
       period: "Avril 2016 à Septembre 2016",
@@ -349,7 +385,7 @@ function CV() {
     functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
     technical: {
       finance: ["TITANTreasury", "Kondor Trade Processing (KTP)", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "CASHSOLUTIONS", "KYRIBA", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "SAP 4/HANA", "Qualiac", "Open Trade", "Flex pro", "3SKEY", "Business Objects"],
-      it: ["Base de données", "ETL","Ticketing", "Ordonnaceurs", "Scripts", "Communications bancaires"]
+      it: ["Base de données", "ETL","Ticketing", "Ordonnaceurs", "Scripts", "Communications bancaires", "Intelligence Artificielle (IA)"]
     }
   };
 
@@ -533,4 +569,4 @@ function CV() {
   );
 }
 
-ReactDOM.render(<CV />, document.getElementById('root'));
+export default CV;
