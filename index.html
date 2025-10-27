@@ -8,6 +8,60 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            /* Masquer les éléments non nécessaires à l'impression */
+            button, .no-print {
+                display: none !important;
+            }
+            
+            /* Optimiser pour l'impression */
+            body {
+                background: white !important;
+            }
+            
+            /* Forcer le mode clair pour l'impression */
+            .bg-gray-900, .bg-gray-800, .bg-gray-700 {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .text-white, .text-gray-300, .text-gray-200 {
+                color: black !important;
+            }
+            
+            /* Éviter les sauts de page au milieu des sections */
+            .rounded-2xl, .rounded-xl {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+            
+            /* Forcer l'affichage de toutes les expériences */
+            .space-y-4 > div {
+                page-break-inside: avoid;
+            }
+            
+            /* Masquer le header sticky */
+            .sticky {
+                position: relative !important;
+            }
+            
+            /* Ajuster les marges */
+            .max-w-6xl {
+                max-width: 100% !important;
+                padding: 0 !important;
+            }
+            
+            /* Compacter un peu pour l'impression */
+            .p-12 {
+                padding: 2rem !important;
+            }
+            
+            .p-8 {
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="root"></div>
@@ -101,12 +155,27 @@
             }));
           };
 
+          const handlePrintCV = () => {
+            // Ouvrir toutes les expériences avant d'imprimer
+            const allExpanded = {};
+            experiences.forEach(exp => {
+              allExpanded[exp.id] = true;
+            });
+            setExpandedExperiences(allExpanded);
+            setSkillsExpanded(true);
+            
+            // Attendre que le state soit mis à jour avant d'imprimer
+            setTimeout(() => {
+              window.print();
+            }, 100);
+          };
+
           const skills = {
-            functional: ["Pilotage de projets SI", "AMOA", "Expression de besoins", "Recette fonctionnelle", "Gestion des risques", "Conduite du changement", "PMP", "Méthodologie Agile"],
+            functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
             technical: {
-              finance: ["Treasury Management System (TMS)", "Finance de marché", "Gestion de dette", "Cash Management", "Dérivés financiers", "SAP S4/HANA FM"],
-              it: ["SQL", "KTP (Kondor+)", "Titan Treasury", "SAP modules (FM, CO/PS, MM, FI)", "Interfaces SI", "PeopleSoft GL", "API"],
-              ia: ["Fine-tuning", "Hugging Face", "VLLM", "Runpod"],
+              finance: ["TITANTreasury", "Kondor Trade Processing (KTP)", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "CASHSOLUTIONS", "KYRIBA", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "SAP 4/HANA", "Qualiac", "Open Trade", "Flex pro", "3SKEY", "Business Objects"],
+              it: ["Base de données", "ETL", "Ticketing", "Ordonnanceurs", "Scripts", "Communications bancaires", "API"],
+              ia: ["Intelligence Artificielle (IA)", "Fine-tuning", "Hugging Face", "VLLM", "Runpod"],
               autres: ["Clarity", "Google Analytics"]
             }
           };
@@ -267,10 +336,219 @@
                   title: "Automatisation du contrôle des risques financiers",
                   description: "Mise à disposition d'une solution reflétant la stratégie validée en Conseil d'Administration dans les outils permettant au Middle-Office d'avoir un outil unique pour le contrôle des risques financiers.",
                   tasks: [
-                    "Participation à l'expression de besoin",
-                    "PMO",
-                    "Recette technico-fonctionnelle",
+                    "Paramétrage de DataScope : récupération des données financières pour alimenter TITAN",
+                    "Modélisation des processus Métiers",
+                    "Conception : développement ETL Xchange de 3V Finance",
+                    "Rédaction de la documentation (livrables développés, processus Métiers)",
+                    "Livraison du package",
+                    "Recette",
+                    "Mise en production",
+                    "Vérification du Service Régulier"
+                  ]
+                },
+                {
+                  title: "Migration Saas TITAN",
+                  description: "Dans le cadre du décommissionnement de l'infogérant dédié SI Trésorerie et Salle des Marchés, il y a eu une volonté de migrer les applications en Saas.",
+                  tasks: [
+                    "Rédaction du plan batch",
+                    "Recette applicatives et des interfaces"
+                  ]
+                },
+                {
+                  title: "Migration des flux de paiements et de prévisions de trésorerie",
+                  description: "Dans le cadre du décommissionnement de CashSolutions (centrale de paiements), migration des flux financiers et prévisions de trésorerie de TITAN à destination de Kyriba.",
+                  tasks: [
+                    "Etude d'impacts du changement de format de fichier bancaire (MT101 vers de l'AFB320/160) dans TITAN",
+                    "Animation d'ateliers",
+                    "Rédaction des spécifications techniques",
+                    "Développement des nouveaux formats de fichiers bancaires l'AFB320/160 dans l'ETL Xchange",
+                    "Développement de l'interface de prévisions de Trésorerie à destination de Kyriba",
+                    "Recette",
+                    "Communication avec les équipes (éditeurs, banques)"
+                  ]
+                },
+                {
+                  title: "Changement de la banque principale émettant les flux financiers",
+                  description: "Changement du compte financier principal de SNCF SA.",
+                  tasks: [
+                    "Etude d'impacts",
+                    "Animations des ateliers DSI/Métiers",
+                    "Conception : Développements applicatifs et d'interfaces (paramétrages, SQL)",
+                    "Recette"
+                  ]
+                },
+                {
+                  title: "Taux Risk free rates",
+                  description: "Adaptation du SI dans le cadre du changement réglementaire des taux LIBOR.",
+                  tasks: [
+                    "Etude d'impacts",
+                    "Evolution des outils (TITAN, KTP, DataScope) conjointement avec les éditeurs",
+                    "Montée de version applicative de TITAN",
+                    "Accompagnement à la recette fonctionnelle"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 5,
+              company: "SNCF Réseau",
+              title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
+              period: "Janvier 2018 - Janvier 2020",
+              location: "Saint-Denis (93)",
+              missions: [
+                {
+                  title: "Maintien en condition opérationnelle du SI",
+                  tasks: [
+                    "Administration SI des applications",
+                    "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
+                    "Gestion des relations avec les partenaires externes (éditeurs, banques)",
+                    "Gestion du back log"
+                  ]
+                },
+                {
+                  title: "Remplacement de la solution credit management",
+                  tasks: [
+                    "Benchmark des solutions de credit management en remplacement de la solution en place",
+                    "Lancement d'un Request For Information"
+                  ]
+                },
+                {
+                  title: "Remplacement de la solution de téléphonies de marché",
+                  tasks: [
+                    "Cadrage du besoin",
+                    "Expression de besoin",
+                    "Benchmark des solutions",
+                    "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
+                    "Aide à la prise de décision pour le choix de la solution cible"
+                  ]
+                },
+                {
+                  title: "Rationalisation des licences de la Salle des Marchés",
+                  tasks: [
+                    "Revue contrats",
+                    "Collecte du besoins Métiers",
+                    "Revue du besoin et adaptation en terme de services à contractualiser"
+                  ]
+                },
+                {
+                  title: "Suivi et accompagnement des audits CAC annuels",
+                  tasks: [
+                    "Pilotage interne des demandes des auditeurs",
+                    "Mise à dispositions des livrables"
+                  ]
+                },
+                {
+                  title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
+                  tasks: [
+                    "Revue des processus d'habilitations",
+                    "Mise en place de nouveaux workflow validation des habilitations",
+                    "Proposition de solutions pour automatiser la gestion des habilitations"
+                  ]
+                },
+                {
+                  title: "Industrialisation des données de marché",
+                  tasks: [
+                    "Analyse du besoin",
+                    "Rédaction des spécifications technico-fonctionnelles",
+                    "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
+                    "Paramétrage des courbes de taux, fixings dans les SI avals",
+                    "Contractualisation avec les fournisseurs de données",
+                    "Interfaçages avec l'ensemble des applications du SI",
+                    "Stratégie de recette et tests",
+                    "Recette",
                     "Mise en production et Vérification du Service Régulier"
+                  ]
+                },
+                {
+                  title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
+                  tasks: [
+                    "Cadrage du besoin",
+                    "Rédaction des spécifications fonctionnelles",
+                    "Paramétrages et déploiements",
+                    "Stratégie de recette et tests",
+                    "Recette",
+                    "Mise en production et Vérification du Service Régulier",
+                    "Rédaction de la documentation"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 6,
+              company: "Sodexo",
+              title: "Responsable applicatifs Facilities Management Qualité Tranverse",
+              period: "Octobre 2017 à Décembre 2017",
+              location: "Guyancourt (78)",
+              missions: [
+                {
+                  title: "Maintien en condition opérationnelle du SI",
+                  tasks: [
+                    "Pilotage et suivi de planning",
+                    "Animation des ateliers de travail entre les différents acteurs (MOA, éditeurs, Métiers)",
+                    "Animations hebdomadaires d'ateliers",
+                    "Recueil des besoins",
+                    "Rédaction d'expressions de besoins",
+                    "Implémentation (paramétrages technico-fonctionnel)",
+                    "Tests unitaires et de bout en bout",
+                    "Rédaction de plans de formations",
+                    "Rédaction de documentations",
+                    "Support N2",
+                    "Gestion du back log",
+                    "Suivi de la bonne application des SLA",
+                    "Suivi des livraisons (versions, patch...)",
+                    "Tests unitaires et de bout en bout des livraisons",
+                    "Validation des Mise en Production",
+                    "Mise en place de Vérification de Service Régulier"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 7,
+              company: "SNCF Réseau",
+              title: "Consultant stagiaire AMOA SI département Etudes Finances et Gestion",
+              period: "Avril 2017 à Septembre 2017",
+              location: "Saint-Denis (93)",
+              missions: [
+                {
+                  title: "Pilotage et coordination projet",
+                  description: "Pilotage d'un projet de décommissionnement du SI amont comptable (JD Edwards et migration vers PeopleSoft) alimentant l'application de Credit Management « Wynbe »",
+                  tasks: [
+                    "Pilotage et coordination du projet multi-acteurs afin de respecter les jalons du planning",
+                    "Animation des instances projets (comités projets, comités de pilotage, points d'avancements)",
+                    "Rédaction d'expressions de besoins",
+                    "Stratégie de recette (cahier de recette, plan de charges)",
+                    "Recette et pilotage de la recette de bout en bout",
+                    "Conduite du changement et formations utilisateurs",
+                    "Suivi de la mise en production",
+                    "Vérification du service régulier"
+                  ]
+                },
+                {
+                  title: "Accompagnement utilisateurs et veille réglementaire",
+                  tasks: [
+                    "Rédaction d'un guide utilisateurs « Front to back » de l'application Titan Treasury",
+                    "Veille réglementaire (IFRS 9, EMIR) afin d'anticiper les évolutions impactant Titan Treasury"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 8,
+              company: "American Express / Global Business Travel",
+              title: "Assistant Project Manager",
+              period: "Avril 2016 à Septembre 2016",
+              location: "Rueil-Malmaison (92)",
+              missions: [
+                {
+                  title: "Organisation et planification d'évènements pour les leaders mondiaux des laboratoires pharmaceutiques",
+                  tasks: [
+                    "Pilotage et coordination des évènements à échelle internationale",
+                    "Recueil et analyse des besoins",
+                    "Négociation avec les parties prenantes",
+                    "Organisation des appels d'offres",
+                    "Logistique",
+                    "Suivi des budgets et de la refacturation"
                   ]
                 }
               ]
@@ -279,17 +557,22 @@
 
           const education = [
             {
-              degree: "Master 2 - Ingénierie Financière",
-              school: "Université Paris Dauphine - PSL",
-              period: "2018-2019"
+              degree: "Master 2 Systèmes d'information pour la finance de marché",
+              school: "Institut Mines Télécom (Business School) - Evry, France",
+              period: "2013-2017"
             },
             {
-              degree: "Licence Économie et Gestion",
-              school: "Université Paris Nanterre",
-              period: "2015-2018"
+              degree: "Mentor Language Institute",
+              school: "Los Angeles, Etats-Unis",
+              period: "2015-2016"
             },
             {
-              degree: "Classes préparatoires aux grandes écoles (CPGE) - ECS",
+              degree: "Classe Préparatoire aux Grandes Ecoles de Commerce ECT",
+              school: "Ecole Nationale de Commerce - Paris, France",
+              period: "2011-2013"
+            },
+            {
+              degree: "Baccalauréat STG option comptabilité et finance d'entreprise",
               school: "Lycée Jean-Pierre Vernant - Sèvres, France",
               period: "2010-2011"
             }
@@ -303,8 +586,8 @@
 
           const stats = [
             { label: "Ans d'expérience", value: "9" },
-            { label: "Projets menés", value: "15+" },
-            { label: "Domaines", value: "3" }
+            { label: "Projets menés", value: "50+" },
+            { label: "Domaines", value: "4" }
           ];
 
           return (
@@ -342,7 +625,7 @@
                         Yahya BENABDELKRIM
                       </h1>
                       <p className="text-2xl text-blue-600 mb-4 font-medium">
-                        Chef de projets AMOA • SI Finance & Trésorerie
+                        Directeur de projets & AMOA • Expert SI Finance & Trésorerie
                       </p>
                       
                       <div className={`flex flex-wrap gap-4 mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'} justify-center md:justify-start`}>
@@ -370,7 +653,10 @@
                           <Linkedin className="w-5 h-5" />
                           LinkedIn
                         </a>
-                        <button className={`flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-100 text-gray-700'} rounded-lg hover:bg-gray-200 transition font-medium`}>
+                        <button 
+                          onClick={handlePrintCV}
+                          className={`flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} rounded-lg transition font-medium`}
+                        >
                           <Download className="w-5 h-5" />
                           CV PDF
                         </button>
@@ -405,7 +691,7 @@
                   {skillsExpanded && (
                     <div className="space-y-6">
                       <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Expertises AMOA</h3>
+                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Gestion & Management</h3>
                         <div className="flex flex-wrap gap-2">
                           {skills.functional.map((skill, index) => (
                             <span 
