@@ -18,7 +18,7 @@
             }
             
             @page {
-                margin: 1.5cm;
+                margin: 1cm;
                 size: A4 portrait;
             }
             
@@ -31,54 +31,160 @@
             /* Masquer les éléments non nécessaires */
             button, 
             .sticky,
-            footer,
-            [class*="hover:"],
-            .cursor-pointer {
+            footer {
                 display: none !important;
             }
             
-            /* Forcer le mode clair et couleurs lisibles */
-            .bg-gray-900,
-            .bg-gray-800,
-            .bg-gray-700,
-            .bg-gray-650 {
-                background: white !important;
-            }
-            
-            .bg-gray-50 {
-                background: #f8f9fa !important;
-            }
-            
-            .text-white,
-            .text-gray-100,
-            .text-gray-200,
-            .text-gray-300 {
-                color: #1a1a1a !important;
-            }
-            
-            .text-gray-400,
-            .text-gray-500 {
-                color: #4a5568 !important;
-            }
-            
-            .text-gray-600,
-            .text-gray-700 {
-                color: #2d3748 !important;
-            }
-            
-            .border-gray-700,
-            .border-gray-300 {
-                border-color: #e2e8f0 !important;
-            }
-            
             /* Container principal */
+            .min-h-screen {
+                min-height: auto !important;
+            }
+            
             .max-w-6xl {
                 max-width: 100% !important;
                 padding: 0 !important;
                 margin: 0 !important;
             }
             
-            /* Réduire les espacements */
+            /* FORCER LE MODE CLAIR - Backgrounds */
+            .bg-gray-900 {
+                background-color: white !important;
+            }
+            
+            .bg-gray-800 {
+                background-color: white !important;
+            }
+            
+            .bg-gray-700 {
+                background-color: #f8f9fa !important;
+            }
+            
+            .bg-gray-650 {
+                background-color: #f1f3f5 !important;
+            }
+            
+            .bg-gray-50 {
+                background-color: #f8f9fa !important;
+            }
+            
+            /* FORCER LES TEXTES EN NOIR */
+            .text-white {
+                color: #000000 !important;
+            }
+            
+            .text-gray-100,
+            .text-gray-200,
+            .text-gray-300 {
+                color: #1a1a1a !important;
+            }
+            
+            .text-gray-400 {
+                color: #495057 !important;
+            }
+            
+            .text-gray-600,
+            .text-gray-700 {
+                color: #212529 !important;
+            }
+            
+            /* Couleurs des badges - FORCER L'AFFICHAGE */
+            .bg-blue-900 {
+                background-color: #dbeafe !important;
+            }
+            
+            .bg-blue-50 {
+                background-color: #dbeafe !important;
+            }
+            
+            .text-blue-200 {
+                color: #1e40af !important;
+            }
+            
+            .text-blue-700 {
+                color: #1e40af !important;
+            }
+            
+            .bg-green-900 {
+                background-color: #d1fae5 !important;
+            }
+            
+            .bg-green-50 {
+                background-color: #d1fae5 !important;
+            }
+            
+            .text-green-200 {
+                color: #065f46 !important;
+            }
+            
+            .text-green-700 {
+                color: #065f46 !important;
+            }
+            
+            .bg-purple-900 {
+                background-color: #e9d5ff !important;
+            }
+            
+            .bg-purple-50 {
+                background-color: #e9d5ff !important;
+            }
+            
+            .text-purple-200 {
+                color: #6b21a8 !important;
+            }
+            
+            .text-purple-700 {
+                color: #6b21a8 !important;
+            }
+            
+            .bg-pink-900 {
+                background-color: #fce7f3 !important;
+            }
+            
+            .bg-pink-50 {
+                background-color: #fce7f3 !important;
+            }
+            
+            .text-pink-200 {
+                color: #9f1239 !important;
+            }
+            
+            .text-pink-700 {
+                color: #9f1239 !important;
+            }
+            
+            .bg-orange-900 {
+                background-color: #fed7aa !important;
+            }
+            
+            .bg-orange-50 {
+                background-color: #fed7aa !important;
+            }
+            
+            .text-orange-200 {
+                color: #9a3412 !important;
+            }
+            
+            .text-orange-700 {
+                color: #9a3412 !important;
+            }
+            
+            /* Titres en bleu */
+            .text-blue-600 {
+                color: #2563eb !important;
+            }
+            
+            .text-blue-400 {
+                color: #3b82f6 !important;
+            }
+            
+            /* Bordures */
+            .border-gray-700,
+            .border-gray-300,
+            .border-gray-200 {
+                border-color: #dee2e6 !important;
+            }
+            
+            /* Réduire les espacements pour tout faire tenir */
             .py-12 {
                 padding-top: 0.5rem !important;
                 padding-bottom: 0.5rem !important;
@@ -93,23 +199,59 @@
             }
             
             .p-6 {
+                padding: 0.6rem !important;
+            }
+            
+            .p-5 {
                 padding: 0.5rem !important;
             }
             
+            .p-4 {
+                padding: 0.4rem !important;
+            }
+            
             .mb-8 {
-                margin-bottom: 1rem !important;
+                margin-bottom: 0.75rem !important;
             }
             
             .mb-6 {
                 margin-bottom: 0.5rem !important;
             }
             
+            .mb-4 {
+                margin-bottom: 0.4rem !important;
+            }
+            
+            .mb-3 {
+                margin-bottom: 0.3rem !important;
+            }
+            
+            .mb-2 {
+                margin-bottom: 0.2rem !important;
+            }
+            
             .gap-8 {
-                gap: 0.75rem !important;
+                gap: 0.5rem !important;
+            }
+            
+            .gap-6 {
+                gap: 0.4rem !important;
+            }
+            
+            .gap-4 {
+                gap: 0.3rem !important;
+            }
+            
+            .gap-3 {
+                gap: 0.25rem !important;
+            }
+            
+            .gap-2 {
+                gap: 0.2rem !important;
             }
             
             .space-y-8 > * + * {
-                margin-top: 0.75rem !important;
+                margin-top: 0.6rem !important;
             }
             
             .space-y-6 > * + * {
@@ -117,7 +259,15 @@
             }
             
             .space-y-4 > * + * {
-                margin-top: 0.5rem !important;
+                margin-top: 0.4rem !important;
+            }
+            
+            .space-y-3 > * + * {
+                margin-top: 0.3rem !important;
+            }
+            
+            .space-y-1 > * + * {
+                margin-top: 0.15rem !important;
             }
             
             /* Éviter les sauts de page */
@@ -125,186 +275,169 @@
             .rounded-xl {
                 page-break-inside: avoid;
                 break-inside: avoid;
-                border-radius: 8px !important;
+                border-radius: 6px !important;
             }
             
-            /* Hero section - plus compact */
-            .flex-col.md\\:flex-row {
-                flex-direction: row !important;
+            /* IMPORTANT: S'assurer que tout le contenu des expériences est visible */
+            .space-y-4 > div {
+                page-break-inside: auto !important;
+                break-inside: auto !important;
             }
             
-            /* Photo de profil - plus petite pour le PDF */
+            /* Photo de profil plus petite */
             .w-40.h-40 {
-                width: 80px !important;
-                height: 80px !important;
+                width: 70px !important;
+                height: 70px !important;
             }
             
             /* Titres plus compacts */
             .text-4xl {
-                font-size: 1.5rem !important;
+                font-size: 1.4rem !important;
                 line-height: 1.3 !important;
             }
             
             .text-3xl {
-                font-size: 1.3rem !important;
+                font-size: 1.2rem !important;
                 line-height: 1.3 !important;
             }
             
             .text-2xl {
-                font-size: 1.1rem !important;
+                font-size: 1.05rem !important;
                 line-height: 1.3 !important;
             }
             
             .text-xl {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
                 line-height: 1.3 !important;
             }
             
             .text-lg {
-                font-size: 0.95rem !important;
+                font-size: 0.9rem !important;
+                line-height: 1.3 !important;
             }
             
-            /* Stats - en ligne et compact */
+            /* Texte de base */
+            body, p, li, span {
+                font-size: 0.85rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Stats compacts */
             .grid.grid-cols-3 {
                 display: flex !important;
                 justify-content: space-around !important;
-                gap: 1rem !important;
+                gap: 0.75rem !important;
                 margin-top: 0.5rem !important;
                 padding-top: 0.5rem !important;
             }
             
-            /* Compétences - badges plus compacts */
+            /* Badges de compétences */
             .px-4.py-2 {
-                padding: 0.25rem 0.5rem !important;
-                font-size: 0.75rem !important;
+                padding: 0.2rem 0.5rem !important;
+                font-size: 0.7rem !important;
+                line-height: 1.2 !important;
             }
             
             .flex-wrap {
-                gap: 0.25rem !important;
+                gap: 0.2rem !important;
             }
             
-            /* Expériences - toujours ouvertes */
-            .cursor-pointer {
-                cursor: default !important;
-            }
-            
-            /* Liste à puces plus compacte */
+            /* Liste à puces */
             .list-disc {
                 margin-left: 1rem !important;
+                padding-left: 0 !important;
             }
             
             .list-disc li {
-                font-size: 0.85rem !important;
-                line-height: 1.4 !important;
+                font-size: 0.8rem !important;
+                line-height: 1.35 !important;
                 margin-bottom: 0.1rem !important;
             }
             
-            /* Ombres désactivées */
+            /* Ombres remplacées par bordures */
             .shadow-xl,
             .shadow-lg,
             .shadow-2xl {
                 box-shadow: none !important;
-                border: 1px solid #e2e8f0 !important;
+                border: 1px solid #dee2e6 !important;
             }
             
-            /* Améliorer la lisibilité des liens */
+            /* Liens */
             a {
                 color: #2563eb !important;
                 text-decoration: none !important;
             }
             
-            /* Icônes plus petites */
-            svg.w-6,
-            svg.w-5,
-            svg.w-4 {
-                width: 14px !important;
-                height: 14px !important;
+            /* Icônes */
+            svg {
+                width: 12px !important;
+                height: 12px !important;
             }
             
-            /* Sections Formation et Langues côte à côte compactes */
+            /* Formation et Langues côte à côte */
             .grid.md\\:grid-cols-2 {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
-                gap: 0.75rem !important;
+                gap: 0.5rem !important;
             }
             
-            /* Barres de progression des langues */
+            /* Barres de progression */
             .h-2 {
-                height: 6px !important;
+                height: 5px !important;
             }
             
-            /* Emojis plus petits */
-            .text-center > span {
-                font-size: 0.9rem !important;
+            .w-full.h-2 {
+                height: 5px !important;
             }
             
-            /* Point vert de statut - masquer en impression */
-            .bg-green-500.w-8.h-8 {
+            /* Point vert masqué */
+            .absolute.-bottom-2.-right-2 {
                 display: none !important;
             }
             
-            /* Optimiser les marges des cartes */
+            /* Marges des cartes */
             .rounded-2xl.shadow-xl {
                 margin-bottom: 0.5rem !important;
             }
             
-            /* Forcer l'impression des couleurs de fond pour les badges */
-            .bg-blue-50,
-            .bg-green-50,
-            .bg-purple-50,
-            .bg-pink-50,
-            .bg-orange-50,
-            .bg-blue-900,
-            .bg-green-900,
-            .bg-purple-900,
-            .bg-pink-900,
-            .bg-orange-900 {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
-            
-            /* Assurer que les textes colorés restent lisibles */
-            .text-blue-600,
-            .text-blue-700,
-            .text-blue-800 {
-                color: #2563eb !important;
-            }
-            
-            .text-green-700,
-            .text-green-800 {
-                color: #15803d !important;
-            }
-            
-            .text-purple-700,
-            .text-purple-800 {
-                color: #7e22ce !important;
-            }
-            
-            .text-pink-700,
-            .text-pink-800 {
-                color: #be185d !important;
-            }
-            
-            .text-orange-700,
-            .text-orange-800 {
-                color: #c2410c !important;
-            }
-            
-            /* Optimiser les titres de section */
+            /* Headers de section */
             h2 {
-                font-size: 1.2rem !important;
-                margin-bottom: 0.5rem !important;
-                color: #1a1a1a !important;
+                font-size: 1.1rem !important;
+                margin-bottom: 0.4rem !important;
+                font-weight: 700 !important;
             }
             
             h3 {
-                font-size: 1rem !important;
+                font-size: 0.95rem !important;
                 margin-bottom: 0.3rem !important;
+                font-weight: 600 !important;
             }
             
             h4 {
-                font-size: 0.9rem !important;
+                font-size: 0.85rem !important;
                 margin-bottom: 0.2rem !important;
+                font-weight: 600 !important;
+            }
+            
+            h5 {
+                font-size: 0.8rem !important;
+                margin-bottom: 0.2rem !important;
+                font-weight: 500 !important;
+            }
+            
+            /* Assurer que le contenu des divs repliables est visible */
+            .hidden {
+                display: block !important;
+            }
+            
+            /* Curseur par défaut */
+            .cursor-pointer {
+                cursor: default !important;
+            }
+            
+            /* Rotation de l'icône chevron - la remettre droite */
+            .rotate-180 {
+                transform: rotate(0deg) !important;
             }
         }
     </style>
