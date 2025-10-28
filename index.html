@@ -9,6 +9,11 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Styles pour l'écran - indicateur de suite caché */
+        .page-continue {
+            display: none;
+        }
+        
         @media print {
             /* Configuration de base pour l'impression */
             * {
@@ -184,6 +189,24 @@
                 border-color: #dee2e6 !important;
             }
             
+            /* INDICATEUR DE CONTINUATION */
+            .page-continue {
+                display: block !important;
+                text-align: right;
+                font-size: 0.75rem !important;
+                color: #6c757d !important;
+                font-style: italic;
+                margin-top: 0.5rem;
+                padding-right: 1rem;
+            }
+            
+            /* Ajouter de l'espace après les sections pour l'indicateur */
+            .rounded-2xl.shadow-xl::after {
+                content: "";
+                display: block;
+                height: 0.5rem;
+            }
+            
             /* Réduire les espacements pour tout faire tenir */
             .py-12 {
                 padding-top: 0.5rem !important;
@@ -270,15 +293,13 @@
                 margin-top: 0.15rem !important;
             }
             
-            /* Éviter les sauts de page */
+            /* Éviter les sauts de page en milieu de section quand possible */
             .rounded-2xl,
             .rounded-xl {
-                page-break-inside: avoid;
-                break-inside: avoid;
                 border-radius: 6px !important;
             }
             
-            /* IMPORTANT: S'assurer que tout le contenu des expériences est visible */
+            /* Permettre les sauts de page pour les expériences longues */
             .space-y-4 > div {
                 page-break-inside: auto !important;
                 break-inside: auto !important;
@@ -1161,6 +1182,9 @@
                     </div>
                   )}
                 </div>
+                
+                {/* Indicateur de continuation pour le PDF */}
+                <div className="page-continue">Suite page suivante →</div>
 
                 {/* Expériences */}
                 <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8 mb-8`}>
@@ -1221,6 +1245,9 @@
                     ))}
                   </div>
                 </div>
+                
+                {/* Indicateur de continuation pour le PDF */}
+                <div className="page-continue">Suite page suivante →</div>
 
                 {/* Formation et Langues */}
                 <div className="grid md:grid-cols-2 gap-8">
