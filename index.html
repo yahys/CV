@@ -9,11 +9,6 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Styles pour l'écran - indicateur de suite caché */
-        .page-continue {
-            display: none;
-        }
-        
         @media print {
             /* Configuration de base pour l'impression */
             * {
@@ -58,6 +53,7 @@
             
             .bg-gray-800 {
                 background-color: white !important;
+                border: 1px solid #dee2e6 !important;
             }
             
             .bg-gray-700 {
@@ -189,24 +185,6 @@
                 border-color: #dee2e6 !important;
             }
             
-            /* INDICATEUR DE CONTINUATION */
-            .page-continue {
-                display: block !important;
-                text-align: right;
-                font-size: 0.75rem !important;
-                color: #6c757d !important;
-                font-style: italic;
-                margin-top: 0.5rem;
-                padding-right: 1rem;
-            }
-            
-            /* Ajouter de l'espace après les sections pour l'indicateur */
-            .rounded-2xl.shadow-xl::after {
-                content: "";
-                display: block;
-                height: 0.5rem;
-            }
-            
             /* Réduire les espacements pour tout faire tenir */
             .py-12 {
                 padding-top: 0.5rem !important;
@@ -214,43 +192,39 @@
             }
             
             .p-12 {
-                padding: 1rem !important;
-            }
-            
-            .p-8 {
-                padding: 0.75rem !important;
-            }
-            
-            .p-6 {
                 padding: 0.6rem !important;
             }
             
-            .p-5 {
-                padding: 0.5rem !important;
+            .p-8 {
+                padding: 0.6rem !important;
             }
             
-            .p-4 {
+            .p-6 {
                 padding: 0.4rem !important;
             }
             
             .mb-8 {
-                margin-bottom: 0.75rem !important;
-            }
-            
-            .mb-6 {
                 margin-bottom: 0.5rem !important;
             }
             
-            .mb-4 {
+            .mb-6 {
                 margin-bottom: 0.4rem !important;
             }
             
-            .mb-3 {
+            .mb-4 {
                 margin-bottom: 0.3rem !important;
+            }
+            
+            .mb-3 {
+                margin-bottom: 0.25rem !important;
             }
             
             .mb-2 {
                 margin-bottom: 0.2rem !important;
+            }
+            
+            .mb-1 {
+                margin-bottom: 0.1rem !important;
             }
             
             .gap-8 {
@@ -266,64 +240,54 @@
             }
             
             .gap-3 {
-                gap: 0.25rem !important;
-            }
-            
-            .gap-2 {
                 gap: 0.2rem !important;
             }
             
-            .space-y-8 > * + * {
-                margin-top: 0.6rem !important;
+            .gap-2 {
+                gap: 0.15rem !important;
             }
             
             .space-y-6 > * + * {
-                margin-top: 0.5rem !important;
-            }
-            
-            .space-y-4 > * + * {
                 margin-top: 0.4rem !important;
             }
             
-            .space-y-3 > * + * {
+            .space-y-4 > * + * {
                 margin-top: 0.3rem !important;
             }
             
-            .space-y-1 > * + * {
-                margin-top: 0.15rem !important;
+            .space-y-3 > * + * {
+                margin-top: 0.25rem !important;
             }
             
-            /* Éviter les sauts de page en milieu de section quand possible */
+            .space-y-1 > * + * {
+                margin-top: 0.1rem !important;
+            }
+            
+            /* Éviter les sauts de page */
             .rounded-2xl,
             .rounded-xl {
                 border-radius: 6px !important;
             }
             
-            /* Permettre les sauts de page pour les expériences longues */
-            .space-y-4 > div {
-                page-break-inside: auto !important;
-                break-inside: auto !important;
-            }
-            
-            /* Photo de profil plus petite */
+            /* Photo de profil */
             .w-40.h-40 {
                 width: 70px !important;
                 height: 70px !important;
             }
             
-            /* Titres plus compacts */
+            /* Titres compacts */
             .text-4xl {
                 font-size: 1.4rem !important;
-                line-height: 1.3 !important;
+                line-height: 1.2 !important;
             }
             
             .text-3xl {
                 font-size: 1.2rem !important;
-                line-height: 1.3 !important;
+                line-height: 1.2 !important;
             }
             
             .text-2xl {
-                font-size: 1.05rem !important;
+                font-size: 1.1rem !important;
                 line-height: 1.3 !important;
             }
             
@@ -339,28 +303,28 @@
             
             /* Texte de base */
             body, p, li, span {
-                font-size: 0.85rem !important;
-                line-height: 1.4 !important;
+                font-size: 0.8rem !important;
+                line-height: 1.35 !important;
             }
             
             /* Stats compacts */
             .grid.grid-cols-3 {
                 display: flex !important;
                 justify-content: space-around !important;
-                gap: 0.75rem !important;
+                gap: 0.5rem !important;
                 margin-top: 0.5rem !important;
                 padding-top: 0.5rem !important;
             }
             
             /* Badges de compétences */
             .px-4.py-2 {
-                padding: 0.2rem 0.5rem !important;
-                font-size: 0.7rem !important;
+                padding: 0.15rem 0.4rem !important;
+                font-size: 0.65rem !important;
                 line-height: 1.2 !important;
             }
             
             .flex-wrap {
-                gap: 0.2rem !important;
+                gap: 0.15rem !important;
             }
             
             /* Liste à puces */
@@ -370,9 +334,9 @@
             }
             
             .list-disc li {
-                font-size: 0.8rem !important;
-                line-height: 1.35 !important;
-                margin-bottom: 0.1rem !important;
+                font-size: 0.75rem !important;
+                line-height: 1.3 !important;
+                margin-bottom: 0.05rem !important;
             }
             
             /* Ombres remplacées par bordures */
@@ -381,12 +345,6 @@
             .shadow-2xl {
                 box-shadow: none !important;
                 border: 1px solid #dee2e6 !important;
-            }
-            
-            /* Liens */
-            a {
-                color: #2563eb !important;
-                text-decoration: none !important;
             }
             
             /* Icônes */
@@ -404,11 +362,11 @@
             
             /* Barres de progression */
             .h-2 {
-                height: 5px !important;
+                height: 4px !important;
             }
             
             .w-full.h-2 {
-                height: 5px !important;
+                height: 4px !important;
             }
             
             /* Point vert masqué */
@@ -429,8 +387,8 @@
             }
             
             h3 {
-                font-size: 0.95rem !important;
-                margin-bottom: 0.3rem !important;
+                font-size: 0.9rem !important;
+                margin-bottom: 0.25rem !important;
                 font-weight: 600 !important;
             }
             
@@ -441,12 +399,12 @@
             }
             
             h5 {
-                font-size: 0.8rem !important;
-                margin-bottom: 0.2rem !important;
+                font-size: 0.75rem !important;
+                margin-bottom: 0.15rem !important;
                 font-weight: 500 !important;
             }
             
-            /* Assurer que le contenu des divs repliables est visible */
+            /* Assurer que le contenu des divs est visible */
             .hidden {
                 display: block !important;
             }
@@ -456,9 +414,27 @@
                 cursor: default !important;
             }
             
-            /* Rotation de l'icône chevron - la remettre droite */
+            /* Rotation de l'icône chevron */
             .rotate-180 {
                 transform: rotate(0deg) !important;
+            }
+            
+            /* Section expériences - optimisation */
+            .rounded-xl.p-6 {
+                padding: 0.4rem !important;
+            }
+            
+            /* Border-t dans expériences */
+            .border-t {
+                border-top: 1px solid #dee2e6 !important;
+                padding-top: 0.3rem !important;
+                margin-top: 0.3rem !important;
+            }
+            
+            /* Italic descriptions */
+            .italic {
+                font-style: italic !important;
+                font-size: 0.7rem !important;
             }
         }
     </style>
@@ -1182,9 +1158,6 @@
                     </div>
                   )}
                 </div>
-                
-                {/* Indicateur de continuation pour le PDF */}
-                <div className="page-continue">Suite page suivante →</div>
 
                 {/* Expériences */}
                 <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8 mb-8`}>
@@ -1245,9 +1218,6 @@
                     ))}
                   </div>
                 </div>
-                
-                {/* Indicateur de continuation pour le PDF */}
-                <div className="page-continue">Suite page suivante →</div>
 
                 {/* Formation et Langues */}
                 <div className="grid md:grid-cols-2 gap-8">
