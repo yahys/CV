@@ -10,432 +10,77 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @media print {
-            /* Configuration de base pour l'impression */
-            * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color-adjust: exact !important;
-            }
-            
-            @page {
-                margin: 1cm;
-                size: A4 portrait;
-            }
-            
-            body {
-                background: white !important;
-                margin: 0;
-                padding: 0;
-            }
-            
-            /* Masquer les éléments non nécessaires */
-            button, 
-            .sticky,
-            footer {
-                display: none !important;
-            }
-            
-            /* Container principal */
-            .min-h-screen {
-                min-height: auto !important;
-            }
-            
-            .max-w-6xl {
-                max-width: 100% !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            
-            /* FORCER LE MODE CLAIR - Backgrounds */
-            .bg-gray-900 {
-                background-color: white !important;
-            }
-            
-            .bg-gray-800 {
-                background-color: white !important;
-                border: 1px solid #dee2e6 !important;
-            }
-            
-            .bg-gray-700 {
-                background-color: #f8f9fa !important;
-            }
-            
-            .bg-gray-650 {
-                background-color: #f1f3f5 !important;
-            }
-            
-            .bg-gray-50 {
-                background-color: #f8f9fa !important;
-            }
-            
-            /* FORCER LES TEXTES EN NOIR */
-            .text-white {
-                color: #000000 !important;
-            }
-            
-            .text-gray-100,
-            .text-gray-200,
-            .text-gray-300 {
-                color: #1a1a1a !important;
-            }
-            
-            .text-gray-400 {
-                color: #495057 !important;
-            }
-            
-            .text-gray-600,
-            .text-gray-700 {
-                color: #212529 !important;
-            }
-            
-            /* Couleurs des badges - FORCER L'AFFICHAGE */
-            .bg-blue-900 {
-                background-color: #dbeafe !important;
-            }
-            
-            .bg-blue-50 {
-                background-color: #dbeafe !important;
-            }
-            
-            .text-blue-200 {
-                color: #1e40af !important;
-            }
-            
-            .text-blue-700 {
-                color: #1e40af !important;
-            }
-            
-            .bg-green-900 {
-                background-color: #d1fae5 !important;
-            }
-            
-            .bg-green-50 {
-                background-color: #d1fae5 !important;
-            }
-            
-            .text-green-200 {
-                color: #065f46 !important;
-            }
-            
-            .text-green-700 {
-                color: #065f46 !important;
-            }
-            
-            .bg-purple-900 {
-                background-color: #e9d5ff !important;
-            }
-            
-            .bg-purple-50 {
-                background-color: #e9d5ff !important;
-            }
-            
-            .text-purple-200 {
-                color: #6b21a8 !important;
-            }
-            
-            .text-purple-700 {
-                color: #6b21a8 !important;
-            }
-            
-            .bg-pink-900 {
-                background-color: #fce7f3 !important;
-            }
-            
-            .bg-pink-50 {
-                background-color: #fce7f3 !important;
-            }
-            
-            .text-pink-200 {
-                color: #9f1239 !important;
-            }
-            
-            .text-pink-700 {
-                color: #9f1239 !important;
-            }
-            
-            .bg-orange-900 {
-                background-color: #fed7aa !important;
-            }
-            
-            .bg-orange-50 {
-                background-color: #fed7aa !important;
-            }
-            
-            .text-orange-200 {
-                color: #9a3412 !important;
-            }
-            
-            .text-orange-700 {
-                color: #9a3412 !important;
-            }
-            
-            /* Titres en bleu */
-            .text-blue-600 {
-                color: #2563eb !important;
-            }
-            
-            .text-blue-400 {
-                color: #3b82f6 !important;
-            }
-            
-            /* Bordures */
-            .border-gray-700,
-            .border-gray-300,
-            .border-gray-200 {
-                border-color: #dee2e6 !important;
-            }
-            
-            /* Réduire les espacements pour tout faire tenir */
-            .py-12 {
-                padding-top: 0.5rem !important;
-                padding-bottom: 0.5rem !important;
-            }
-            
-            .p-12 {
-                padding: 0.6rem !important;
-            }
-            
-            .p-8 {
-                padding: 0.6rem !important;
-            }
-            
-            .p-6 {
-                padding: 0.4rem !important;
-            }
-            
-            .mb-8 {
-                margin-bottom: 0.5rem !important;
-            }
-            
-            .mb-6 {
-                margin-bottom: 0.4rem !important;
-            }
-            
-            .mb-4 {
-                margin-bottom: 0.3rem !important;
-            }
-            
-            .mb-3 {
-                margin-bottom: 0.25rem !important;
-            }
-            
-            .mb-2 {
-                margin-bottom: 0.2rem !important;
-            }
-            
-            .mb-1 {
-                margin-bottom: 0.1rem !important;
-            }
-            
-            .gap-8 {
-                gap: 0.5rem !important;
-            }
-            
-            .gap-6 {
-                gap: 0.4rem !important;
-            }
-            
-            .gap-4 {
-                gap: 0.3rem !important;
-            }
-            
-            .gap-3 {
-                gap: 0.2rem !important;
-            }
-            
-            .gap-2 {
-                gap: 0.15rem !important;
-            }
-            
-            .space-y-6 > * + * {
-                margin-top: 0.4rem !important;
-            }
-            
-            .space-y-4 > * + * {
-                margin-top: 0.3rem !important;
-            }
-            
-            .space-y-3 > * + * {
-                margin-top: 0.25rem !important;
-            }
-            
-            .space-y-1 > * + * {
-                margin-top: 0.1rem !important;
-            }
-            
-            /* Éviter les sauts de page */
-            .rounded-2xl,
-            .rounded-xl {
-                border-radius: 6px !important;
-            }
-            
-            /* Photo de profil */
-            .w-40.h-40 {
-                width: 70px !important;
-                height: 70px !important;
-            }
-            
-            /* Titres compacts */
-            .text-4xl {
-                font-size: 1.4rem !important;
-                line-height: 1.2 !important;
-            }
-            
-            .text-3xl {
-                font-size: 1.2rem !important;
-                line-height: 1.2 !important;
-            }
-            
-            .text-2xl {
-                font-size: 1.1rem !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-xl {
-                font-size: 0.95rem !important;
-                line-height: 1.3 !important;
-            }
-            
-            .text-lg {
-                font-size: 0.9rem !important;
-                line-height: 1.3 !important;
-            }
-            
-            /* Texte de base */
-            body, p, li, span {
-                font-size: 0.8rem !important;
-                line-height: 1.35 !important;
-            }
-            
-            /* Stats compacts */
-            .grid.grid-cols-3 {
-                display: flex !important;
-                justify-content: space-around !important;
-                gap: 0.5rem !important;
-                margin-top: 0.5rem !important;
-                padding-top: 0.5rem !important;
-            }
-            
-            /* Badges de compétences */
-            .px-4.py-2 {
-                padding: 0.15rem 0.4rem !important;
-                font-size: 0.65rem !important;
-                line-height: 1.2 !important;
-            }
-            
-            .flex-wrap {
-                gap: 0.15rem !important;
-            }
-            
-            /* Liste à puces */
-            .list-disc {
-                margin-left: 1rem !important;
-                padding-left: 0 !important;
-            }
-            
-            .list-disc li {
-                font-size: 0.75rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 0.05rem !important;
-            }
-            
-            /* Ombres remplacées par bordures */
-            .shadow-xl,
-            .shadow-lg,
-            .shadow-2xl {
-                box-shadow: none !important;
-                border: 1px solid #dee2e6 !important;
-            }
-            
-            /* Icônes */
-            svg {
-                width: 12px !important;
-                height: 12px !important;
-            }
-            
-            /* Formation et Langues côte à côte */
-            .grid.md\\:grid-cols-2 {
-                display: grid !important;
-                grid-template-columns: 1fr 1fr !important;
-                gap: 0.5rem !important;
-            }
-            
-            /* Barres de progression */
-            .h-2 {
-                height: 4px !important;
-            }
-            
-            .w-full.h-2 {
-                height: 4px !important;
-            }
-            
-            /* Point vert masqué */
-            .absolute.-bottom-2.-right-2 {
-                display: none !important;
-            }
-            
-            /* Marges des cartes */
-            .rounded-2xl.shadow-xl {
-                margin-bottom: 0.5rem !important;
-            }
-            
-            /* Headers de section */
-            h2 {
-                font-size: 1.1rem !important;
-                margin-bottom: 0.4rem !important;
-                font-weight: 700 !important;
-            }
-            
-            h3 {
-                font-size: 0.9rem !important;
-                margin-bottom: 0.25rem !important;
-                font-weight: 600 !important;
-            }
-            
-            h4 {
-                font-size: 0.85rem !important;
-                margin-bottom: 0.2rem !important;
-                font-weight: 600 !important;
-            }
-            
-            h5 {
-                font-size: 0.75rem !important;
-                margin-bottom: 0.15rem !important;
-                font-weight: 500 !important;
-            }
-            
-            /* Assurer que le contenu des divs est visible */
-            .hidden {
-                display: block !important;
-            }
-            
-            /* Curseur par défaut */
-            .cursor-pointer {
-                cursor: default !important;
-            }
-            
-            /* Rotation de l'icône chevron */
-            .rotate-180 {
-                transform: rotate(0deg) !important;
-            }
-            
-            /* Section expériences - optimisation */
-            .rounded-xl.p-6 {
-                padding: 0.4rem !important;
-            }
-            
-            /* Border-t dans expériences */
-            .border-t {
-                border-top: 1px solid #dee2e6 !important;
-                padding-top: 0.3rem !important;
-                margin-top: 0.3rem !important;
-            }
-            
-            /* Italic descriptions */
-            .italic {
-                font-style: italic !important;
-                font-size: 0.7rem !important;
-            }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+            @page { margin: 1cm; size: A4 portrait; }
+            body { background: white !important; margin: 0; padding: 0; }
+            button, .sticky, footer { display: none !important; }
+            .min-h-screen { min-height: auto !important; }
+            .max-w-6xl { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+            .bg-gray-900, .bg-gray-800 { background-color: white !important; border: 1px solid #dee2e6 !important; }
+            .bg-gray-700 { background-color: #f8f9fa !important; }
+            .bg-gray-50 { background-color: #f8f9fa !important; }
+            .text-white { color: #000000 !important; }
+            .text-gray-100, .text-gray-200, .text-gray-300 { color: #1a1a1a !important; }
+            .text-gray-400 { color: #495057 !important; }
+            .text-gray-600, .text-gray-700 { color: #212529 !important; }
+            .bg-blue-900, .bg-blue-50 { background-color: #dbeafe !important; }
+            .text-blue-200, .text-blue-700 { color: #1e40af !important; }
+            .bg-green-900, .bg-green-50 { background-color: #d1fae5 !important; }
+            .text-green-200, .text-green-700 { color: #065f46 !important; }
+            .bg-purple-900, .bg-purple-50 { background-color: #e9d5ff !important; }
+            .text-purple-200, .text-purple-700 { color: #6b21a8 !important; }
+            .bg-pink-900, .bg-pink-50 { background-color: #fce7f3 !important; }
+            .text-pink-200, .text-pink-700 { color: #9f1239 !important; }
+            .bg-orange-900, .bg-orange-50 { background-color: #fed7aa !important; }
+            .text-orange-200, .text-orange-700 { color: #9a3412 !important; }
+            .text-blue-600, .text-blue-400 { color: #2563eb !important; }
+            .border-gray-700, .border-gray-300, .border-gray-200 { border-color: #dee2e6 !important; }
+            .py-12 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+            .p-12 { padding: 0.6rem !important; }
+            .p-8 { padding: 0.6rem !important; }
+            .p-6 { padding: 0.4rem !important; }
+            .mb-8 { margin-bottom: 0.5rem !important; }
+            .mb-6 { margin-bottom: 0.4rem !important; }
+            .mb-4 { margin-bottom: 0.3rem !important; }
+            .mb-3 { margin-bottom: 0.25rem !important; }
+            .mb-2 { margin-bottom: 0.2rem !important; }
+            .gap-8 { gap: 0.5rem !important; }
+            .gap-6 { gap: 0.4rem !important; }
+            .gap-4 { gap: 0.3rem !important; }
+            .gap-3 { gap: 0.2rem !important; }
+            .space-y-6 > * + * { margin-top: 0.4rem !important; }
+            .space-y-4 > * + * { margin-top: 0.3rem !important; }
+            .space-y-3 > * + * { margin-top: 0.25rem !important; }
+            .space-y-1 > * + * { margin-top: 0.1rem !important; }
+            .rounded-2xl, .rounded-xl { border-radius: 6px !important; }
+            .w-40.h-40 { width: 70px !important; height: 70px !important; }
+            .text-4xl { font-size: 1.4rem !important; line-height: 1.2 !important; }
+            .text-3xl { font-size: 1.2rem !important; line-height: 1.2 !important; }
+            .text-2xl { font-size: 1.1rem !important; line-height: 1.3 !important; }
+            .text-xl { font-size: 0.95rem !important; line-height: 1.3 !important; }
+            .text-lg { font-size: 0.9rem !important; line-height: 1.3 !important; }
+            body, p, li, span { font-size: 0.8rem !important; line-height: 1.35 !important; }
+            .grid.grid-cols-3 { display: flex !important; justify-content: space-around !important; gap: 0.5rem !important; margin-top: 0.5rem !important; padding-top: 0.5rem !important; }
+            .px-4.py-2 { padding: 0.15rem 0.4rem !important; font-size: 0.65rem !important; line-height: 1.2 !important; }
+            .flex-wrap { gap: 0.15rem !important; }
+            .list-disc { margin-left: 1rem !important; padding-left: 0 !important; }
+            .list-disc li { font-size: 0.75rem !important; line-height: 1.3 !important; margin-bottom: 0.05rem !important; }
+            .shadow-xl, .shadow-lg, .shadow-2xl { box-shadow: none !important; border: 1px solid #dee2e6 !important; }
+            svg { width: 12px !important; height: 12px !important; }
+            .grid.md\\:grid-cols-2 { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0.5rem !important; }
+            .h-2, .w-full.h-2 { height: 4px !important; }
+            .absolute.-bottom-2.-right-2 { display: none !important; }
+            .rounded-2xl.shadow-xl { margin-bottom: 0.5rem !important; }
+            h2 { font-size: 1.1rem !important; margin-bottom: 0.4rem !important; font-weight: 700 !important; }
+            h3 { font-size: 0.9rem !important; margin-bottom: 0.25rem !important; font-weight: 600 !important; }
+            h4 { font-size: 0.85rem !important; margin-bottom: 0.2rem !important; font-weight: 600 !important; }
+            h5 { font-size: 0.75rem !important; margin-bottom: 0.15rem !important; font-weight: 500 !important; }
+            .hidden { display: block !important; }
+            .cursor-pointer { cursor: default !important; }
+            .rotate-180 { transform: rotate(0deg) !important; }
+            .rounded-xl.p-6 { padding: 0.4rem !important; }
+            .border-t { border-top: 1px solid #dee2e6 !important; padding-top: 0.3rem !important; margin-top: 0.3rem !important; }
+            .italic { font-style: italic !important; font-size: 0.7rem !important; }
         }
     </style>
 </head>
@@ -444,80 +89,18 @@
     <script type="text/babel">
         const { useState } = React;
 
-        // Icônes SVG simplifiés
-        const Moon = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-            </svg>
-        );
-
-        const Sun = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-        );
-
-        const Phone = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-        );
-
-        const Mail = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-        );
-
-        const MapPin = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-        );
-
-        const Linkedin = ({ className }) => (
-            <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-        );
-
-        const Download = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-        );
-
-        const Briefcase = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-        );
-
-        const GraduationCap = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-            </svg>
-        );
-
-        const Code = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-            </svg>
-        );
-
-        const Globe = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-        );
-
-        const ChevronDown = ({ className }) => (
-            <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-        );
+        const Moon = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>);
+        const Sun = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>);
+        const Phone = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>);
+        const Mail = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>);
+        const MapPin = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>);
+        const Linkedin = ({ className }) => (<svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>);
+        const Download = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>);
+        const Briefcase = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>);
+        const GraduationCap = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>);
+        const Code = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>);
+        const Globe = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>);
+        const ChevronDown = ({ className }) => (<svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>);
 
         function CV() {
           const [darkMode, setDarkMode] = useState(false);
@@ -525,93 +108,97 @@
           const [skillsExpanded, setSkillsExpanded] = useState(true);
 
           const toggleExperience = (id) => {
-            setExpandedExperiences(prev => ({
-              ...prev,
-              [id]: !prev[id]
-            }));
+            setExpandedExperiences(prev => ({ ...prev, [id]: !prev[id] }));
           };
 
           const handlePrintCV = () => {
-            // Ouvrir toutes les expériences avant d'imprimer
             const allExpanded = {};
-            experiences.forEach(exp => {
-              allExpanded[exp.id] = true;
-            });
+            experiences.forEach(exp => { allExpanded[exp.id] = true; });
             setExpandedExperiences(allExpanded);
             setSkillsExpanded(true);
-            
-            // Attendre que le state soit mis à jour avant d'imprimer
-            setTimeout(() => {
-              window.print();
-            }, 100);
+            setTimeout(() => { window.print(); }, 100);
           };
 
           const skills = {
-            functional: ["Gestion de projets", "Gestion d'équipes", "Gestion des risques", "Prise de décisions", "Méthodologie"],
-            technical: {
-              finance: ["TITANTreasury", "Kondor Trade Processing (KTP)", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "CASHSOLUTIONS", "KYRIBA", "CUBICUS", "ADIORYX", "TAIGA", "WYNBE", "SAP 4/HANA", "Qualiac", "Open Trade", "Flex pro", "3SKEY", "Business Objects"],
-              it: ["Base de données", "ETL", "Ticketing", "Ordonnanceurs", "Scripts", "Communications bancaires", "API"],
-              ia: ["Intelligence Artificielle (IA)", "Fine-tuning", "Hugging Face", "VLLM", "Runpod", "Comfy"],
-              autres: ["Clarity", "Google Analytics"]
-            }
+            strategy: ["Gouvernance de programmes", "Pilotage exécutif (CODIR)", "Conduite du changement", "Gestion des risques", "PMP/PMI", "Cadrage stratégique"],
+            finance: ["Finance de marché", "Trésorerie", "Gestion de dette", "Risk Management", "Middle-Office", "EMIR", "IFRS 9"],
+            transformation: ["Architecture SI", "Migration Cloud/SaaS", "ETL & Intégration", "RPA & Automatisation", "Communications bancaires"],
+            ia: ["Intelligence Artificielle (IA)", "Fine-tuning", "Hugging Face", "VLLM", "Runpod", "Comfy"],
+            outils: ["TitanTreasury", "Kondor+ KTP", "Bloomberg", "Eikon Refinitiv", "DataScope Refinitiv", "KYRIBA", "SAP S4/HANA", "Qualiac", "Business Objects", "3SKEY", "CASHSOLUTIONS", "CUBICUS", "ADIORYX", "WYNBE", "Open Trade", "Flex pro"]
           };
 
           const experiences = [
             {
               id: 1,
-              company: "Directeur de Projets – Stratégie & Innovation",
-              title: "Directeur de Projets – Stratégie & Innovation",
-              period: "Mars 2025 - Présent",
-              location: "Ville de Paris, Île-de-France, France",
+              company: "Société des Grands Projets (Grand Paris Express)",
+              title: "PMO Programme IA",
+              period: "Janvier 2026 - Présent",
+              location: "Paris",
               missions: [
                 {
-                  title: "Accompagnement stratégique d'un projet innovant mêlant intelligence artificielle (IA), marketing digital et systèmes d'information",
+                  title: "Pilotage du programme Intelligence Artificielle de la SGP",
                   description: "",
                   tasks: [
-                    "Direction de projets : management d'équipes, budgets",
-                    "Définition de la stratégie IA : identification des cas d'usage, cadrage des MVP, choix technologiques",
-                    "Élaboration de la stratégie marketing : positionnement, messages clés, stratégie d'acquisition",
-                    "Pilotage global du projet : structuration des phases, roadmap produit, coordination transverse"
+                    "Pilotage du programme IA : cadrage des cas d'usage prioritaires, feuille de route, gouvernance",
+                    "Coordination des équipes projet internes et externes",
+                    "Suivi de l'avancement, gestion des risques et reporting aux instances de pilotage"
                   ]
                 }
               ]
             },
             {
               id: 2,
-              company: "Éditeur de logiciels Treasury Management System (TMS)",
-              title: "Consultant AMOA SI pour un Éditeur de logiciels Treasury Management System (TMS)",
-              period: "Février 2025",
-              location: "Ville de Paris, Île-de-France, France",
+              company: "Confidentiel",
+              title: "Directeur de Projets – Stratégie & Innovation",
+              period: "Mars 2025 - Présent",
+              location: "Paris",
               missions: [
                 {
-                  title: "Production des livrables projets dans le cadre du déploiement d'un Treasury Management System (TMS), de la phase de cadrage jusqu'au run",
+                  title: "Cadrage stratégique d'un projet combinant IA, Marketing Digital et SI",
                   description: "",
                   tasks: [
-                    "Rédaction des documents clés basés sur les standards PMP (Plan de Management de Projet, gouvernance, gestion des risques, conduite du changement, stratégie de déploiement, etc.)",
-                    "Structuration de l'ensemble des livrables projet pour encadrer le cycle de vie complet de l'implémentation",
-                    "Collaboration étroite avec la direction projet et les équipes techniques de l'éditeur"
+                    "Direction de projets : management d'équipes, pilotage budgets",
+                    "Stratégie IA : identification des cas d'usage, cadrage des MVP, choix technologiques",
+                    "Stratégie marketing : positionnement, messages clés, stratégie d'acquisition",
+                    "Structuration du projet : roadmap produit, gouvernance, coordination transverse"
                   ]
                 }
               ]
             },
             {
               id: 3,
-              company: "Société des Grands Projets (ex-Société du Grand Paris)",
-              title: "Chef de projets AMOA SI (Finance de marché) du domaine Achats Gestion",
-              period: "Mars 2022 - Présent",
+              company: "Éditeur de logiciels TMS",
+              title: "Consultant Stratégie & Management de Projet | 3V FINANCE",
+              period: "Février 2025",
+              location: "Paris",
+              missions: [
+                {
+                  title: "Structuration méthodologique d'un déploiement TMS (cadrage → run)",
+                  description: "",
+                  tasks: [
+                    "Production de l'ensemble des livrables projet basés sur les standards PMP : plan de management, gouvernance, gestion des risques, conduite du changement, stratégie de déploiement",
+                    "Structuration des livrables pour encadrer le cycle de vie complet de l'implémentation",
+                    "Collaboration avec la direction projet et les équipes techniques de l'éditeur"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 4,
+              company: "Société des Grands Projets (Grand Paris Express)",
+              title: "Consultant Senior Stratégie & Transformation SI | Société des Grands Projets | EY & ARTIMON",
+              period: "Mars 2022 - Janvier 2025",
               location: "Saint-Denis (93)",
               missions: [
                 {
-                  title: "Appui au support et évolutions du Treasury Management System - Titantreasury",
-                  description: "Dans le cadre des activités de la Société du Grand Paris et au vu de ses besoins de financement, a été déployé au sein de son SI le progiciel Titan pour la gestion de sa dette, du risque et de sa trésorerie. L'objectif étant d'accompagner le Client pour maintenir la solution (évolutions et correctifs)",
+                  title: "MCO & évolutions du Treasury Management System TitanTreasury",
+                  description: "Dans le cadre des besoins de financement de la SGP, le progiciel Titan a été déployé pour la gestion de sa dette, de son risque et de sa trésorerie. Objectif : accompagner le client dans le maintien et l'évolution de la solution.",
                   tasks: [
-                    "Cadrage des besoins",
-                    "Expression des besoin",
+                    "Cadrage et expression des besoins",
                     "Pilotage des équipes transverses internes et externes",
-                    "Animation des comités",
-                    "Suivi du planning et communication",
-                    "Rédaction de la stratégie de recette",
-                    "Participation à la recette et animation des ateliers",
+                    "Animation des comités de gouvernance",
+                    "Suivi du planning et communication aux instances",
+                    "Rédaction de la stratégie de recette, animation des ateliers",
                     "Mise en production et Vérification du Service Régulier"
                   ],
                   useCases: [
@@ -623,21 +210,19 @@
                   ]
                 },
                 {
-                  title: "Pilotage et AMOA dans le cadre du projet de déploiement de SAP S4/HANA modules FM, CO/PS, MM, FI",
-                  description: "La SGP Dev a été créée afin de valoriser les savoirs et savoir-faire acquis dans la conception et la réalisation du Grand Paris Express. Dans le cadre de ses missions, la filiale de la SGP avait exprimé le besoin de se doter d'un outil d'appui à la gestion financière",
+                  title: "Déploiement SAP S4/HANA — modules FM, CO/PS, MM, FI",
+                  description: "La SGP Dev a été créée pour valoriser les savoir-faire acquis dans la réalisation du Grand Paris Express. La filiale avait besoin d'un outil de gestion financière.",
                   tasks: [
-                    "Cadrage des besoins",
+                    "Cadrage des besoins et définition de la stratégie de déploiement",
                     "Pilotage des équipes transverses internes et externes",
-                    "Animation des comités",
-                    "Suivi du planning et communication",
-                    "Rédaction de la stratégie de recette",
-                    "Participation à la recette et animation des ateliers",
+                    "Animation des comités de gouvernance",
+                    "Rédaction de la stratégie de recette, animation des ateliers",
                     "Mise en production et Vérification du Service Régulier"
                   ]
                 },
                 {
-                  title: "Optimisation de la gestion des irritants fournisseurs",
-                  description: "Dans le cadre de l'amélioration de la chaîne de dépense en finance et comptabilité, un audit des processus métiers a été lancé pour réduire et anticiper les irritants internes et externes. Ce dispositif combine le renforcement des équipes et la mise en place d'un processus outillé pour automatiser, fiabiliser et optimiser les tâches.",
+                  title: "Optimisation de la chaîne de dépense fournisseurs",
+                  description: "Audit des processus métiers Finance et Comptabilité pour réduire et anticiper les irritants internes et externes. Combinaison de renforcement d'équipes et de mise en place d'un processus outillé.",
                   tasks: [
                     "Audit des processus métiers",
                     "Identification et analyse des irritants",
@@ -647,118 +232,97 @@
                 },
                 {
                   title: "Résilience SI de la Salle des Marchés (PRA/PCA)",
-                  description: "Assurer la continuité des activités critiques, prévenir et/ou minimiser les impacts financiers et extra-financiers, et garantir le respect des obligations en interne comme en externe en cas d'incident majeur.",
+                  description: "Assurer la continuité des activités critiques, minimiser les impacts financiers et extra-financiers, garantir le respect des obligations en cas d'incident majeur.",
                   tasks: [
-                    "Collecte du besoin",
-                    "Audit de l'existant",
-                    "Conception de la cible"
+                    "Collecte du besoin et audit de l'existant",
+                    "Conception de l'architecture cible"
                   ]
                 },
                 {
-                  title: "Sécurisation de l'actuelle ERP Qualiac",
-                  description: "En pleine migration d'outil de gestion entre Qualiac vers SAP S4/HANA, des solutions palliatives de secours doivent être déployées pour garantir la continuité de service opérationnelle jusqu'à la bascule",
+                  title: "Sécurisation ERP Qualiac & Plan de Continuité Métiers (PCM)",
+                  description: "En migration Qualiac → SAP S4/HANA : déploiement de solutions palliatives pour garantir la continuité de service. PCM : plan de gestion de crise selon la criticité des flux Achats, Finance et Comptabilité.",
                   tasks: [
-                    "Solutions palliatives de secours pour garantir la continuité de service"
-                  ]
-                },
-                {
-                  title: "Plan de Continuité Métiers (PCM)",
-                  description: "Déploiement d'un plan de gestion de crise en fonction de la criticité des flux des domaines Achats, Finance et Comptables pour permettre la continuité de service",
-                  tasks: [
-                    "Déploiement d'un plan de gestion de crise",
-                    "Analyse de la criticité des flux des domaines Achats, Finance et Comptables"
+                    "Déploiement de solutions de secours jusqu'à la bascule SAP",
+                    "Analyse de la criticité des flux par domaine",
+                    "Déploiement du plan de gestion de crise"
                   ]
                 }
               ]
             },
             {
-              id: 4,
+              id: 5,
               company: "SNCF SA",
-              title: "Chef de projets AMOA SI Dettes & Financements",
+              title: "Consultant Senior Stratégie SI Finance | SNCF SA | Thémis Conseil & Bartle",
               period: "Janvier 2020 - Février 2022",
               location: "Saint-Denis (93)",
               missions: [
                 {
-                  title: "SI 1 émetteur",
-                  description: "Suite à la Réforme Ferroviaire de 2020, l'objectif était d'adapté et déployé le SI en adéquation avec la politique d'avoir un seul émetteur sur les marchés financiers.",
+                  title: "SI 1 Émetteur — politique d'émission obligataire unique",
+                  description: "Suite à la Réforme Ferroviaire de 2020, adaptation et déploiement du SI pour aligner avec la politique d'un seul émetteur sur les marchés financiers.",
                   tasks: [
-                    "Cadrage du besoin",
-                    "Expression de besoin",
+                    "Cadrage et expression du besoin",
                     "Pilotage des équipes transverses internes et externes",
-                    "Animation des comités",
-                    "Suivi du planning et communication auprès de la Direction des Systèmes d'Information et Direction Finance et Trésorerie",
+                    "Animation des comités de gouvernance, reporting DSI et Direction Finance & Trésorerie",
                     "Migration des données vers le SI cible (référentiels, stock d'opérations)",
-                    "Rédaction de la stratégie de recette",
-                    "Participation à la recette et animation des ateliers",
                     "Pilotage du décommissionnement du SI existant (progiciels, interfaces, licences)",
-                    "Mise en production et Vérification du Service Régulier"
+                    "Stratégie de recette, animation des ateliers, mise en production, VSR"
                   ]
                 },
                 {
-                  title: "Multi-entités – gestion des opérations de financements entre la Holding et ses filiales",
+                  title: "Cashpooling Multi-Entités — prêts/emprunts Holding/Filiales",
                   description: "Implémentation du processus de prêts/emprunts et cashpooling entre la Holding et ses filiales dans KTP.",
                   tasks: [
-                    "Participation à l'expression de besoin",
-                    "PMO (animation des comités, suivi de planning et respect des jalons, coordination des acteurs Métiers et techniques)",
-                    "Evolution des interfaces avec les SI amonts et avals (Sage XRT, Sage Rappro, PeopleSoft GL)",
+                    "Expression du besoin, animation des comités, coordination acteurs Métiers et techniques",
+                    "Évolution des interfaces SI amonts et avals (Sage XRT, Sage Rappro, PeopleSoft GL)",
                     "Développement des interfaces KTP en SQL",
-                    "Correction des anomalies",
-                    "Rédaction de la stratégie de recette",
-                    "Recette technico-fonctionnelle",
-                    "Mise en production et Vérification du Service Régulier"
+                    "Recette technico-fonctionnelle, mise en production, VSR"
                   ]
                 },
                 {
                   title: "Automatisation du contrôle des risques financiers",
-                  description: "Mise à disposition d'une solution reflétant la stratégie validée en Conseil d'Administration dans les outils permettant au Middle-Office d'avoir un outil unique pour le contrôle des risques financiers.",
+                  description: "Solution reflétant la stratégie validée en Conseil d'Administration pour le contrôle des risques financiers par le Middle-Office.",
                   tasks: [
-                    "Paramétrage de DataScope : récupération des données financières pour alimenter TITAN",
-                    "Modélisation des processus Métiers",
-                    "Conception : développement ETL Xchange de 3V Finance",
-                    "Rédaction de la documentation (livrables développés, processus Métiers)",
-                    "Livraison du package",
-                    "Recette",
-                    "Mise en production",
-                    "Vérification du Service Régulier"
+                    "Paramétrage DataScope pour alimentation TITAN",
+                    "Modélisation des processus métiers",
+                    "Conception et développement ETL Xchange (3V Finance)",
+                    "Rédaction documentation, recette, mise en production, VSR"
                   ]
                 },
                 {
-                  title: "Migration Saas TITAN",
-                  description: "Dans le cadre du décommissionnement de l'infogérant dédié SI Trésorerie et Salle des Marchés, il y a eu une volonté de migrer les applications en Saas.",
+                  title: "Migration SaaS TITAN",
+                  description: "Décommissionnement de l'infogérant dédié SI Trésorerie et Salle des Marchés, migration des applications en SaaS.",
                   tasks: [
                     "Rédaction du plan batch",
-                    "Recette applicatives et des interfaces"
+                    "Recette applicative et des interfaces"
                   ]
                 },
                 {
-                  title: "Migration des flux de paiements et de prévisions de trésorerie",
-                  description: "Dans le cadre du décommissionnement de CashSolutions (centrale de paiements), migration des flux financiers et prévisions de trésorerie de TITAN à destination de Kyriba.",
+                  title: "Migration flux paiements et prévisions de trésorerie (CashSolutions → Kyriba)",
+                  description: "Décommissionnement de CashSolutions (centrale de paiements), migration des flux financiers et prévisions de trésorerie de TITAN vers Kyriba.",
                   tasks: [
-                    "Etude d'impacts du changement de format de fichier bancaire (MT101 vers de l'AFB320/160) dans TITAN",
-                    "Animation d'ateliers",
+                    "Étude d'impacts du changement de format bancaire (MT101 → AFB320/160) dans TITAN",
                     "Rédaction des spécifications techniques",
-                    "Développement des nouveaux formats de fichiers bancaires l'AFB320/160 dans l'ETL Xchange",
-                    "Développement de l'interface de prévisions de Trésorerie à destination de Kyriba",
-                    "Recette",
-                    "Communication avec les équipes (éditeurs, banques)"
+                    "Développement des nouveaux formats bancaires dans l'ETL Xchange",
+                    "Développement de l'interface de prévisions de trésorerie vers Kyriba",
+                    "Recette, communication avec éditeurs et banques"
                   ]
                 },
                 {
-                  title: "Changement de la banque principale émettant les flux financiers",
-                  description: "Changement du compte financier principal de SNCF SA.",
+                  title: "Changement de la banque principale",
+                  description: "Évolution du SI pour les impacts du changement du compte financier principal de SNCF SA.",
                   tasks: [
-                    "Etude d'impacts",
-                    "Animations des ateliers DSI/Métiers",
-                    "Conception : Développements applicatifs et d'interfaces (paramétrages, SQL)",
+                    "Étude d'impacts",
+                    "Animation des ateliers DSI/Métiers",
+                    "Développements applicatifs et d'interfaces (paramétrages, SQL)",
                     "Recette"
                   ]
                 },
                 {
-                  title: "Taux Risk free rates",
+                  title: "Adaptation réglementaire — Taux Risk Free Rates (LIBOR)",
                   description: "Adaptation du SI dans le cadre du changement réglementaire des taux LIBOR.",
                   tasks: [
-                    "Etude d'impacts",
-                    "Evolution des outils (TITAN, KTP, DataScope) conjointement avec les éditeurs",
+                    "Étude d'impacts",
+                    "Évolution des outils (TITAN, KTP, DataScope) avec les éditeurs",
                     "Montée de version applicative de TITAN",
                     "Accompagnement à la recette fonctionnelle"
                   ]
@@ -766,115 +330,76 @@
               ]
             },
             {
-              id: 5,
+              id: 6,
               company: "SNCF Réseau",
-              title: "Chef de projets AMOA SI Trésorerie Salles des marchés",
+              title: "Consultant Transformation SI Trésorerie & Salle des Marchés | SNCF Réseau | EDP",
               period: "Janvier 2018 - Janvier 2020",
               location: "Saint-Denis (93)",
               missions: [
                 {
                   title: "Maintien en condition opérationnelle du SI",
                   tasks: [
-                    "Administration SI des applications",
-                    "Support N2 pour le périmètre SI Trésorerie & Salle des marchés",
-                    "Gestion des relations avec les partenaires externes (éditeurs, banques)",
-                    "Gestion du back log"
+                    "Administration SI des applications Trésorerie & Salle des Marchés",
+                    "Support N2, gestion des relations éditeurs et banques",
+                    "Gestion du backlog"
                   ]
                 },
                 {
-                  title: "Remplacement de la solution credit management",
+                  title: "Industrialisation des données de marché",
                   tasks: [
-                    "Benchmark des solutions de credit management en remplacement de la solution en place",
-                    "Lancement d'un Request For Information"
+                    "Analyse du besoin, rédaction des spécifications technico-fonctionnelles",
+                    "Déploiement DataScope Refinitiv (paramétrage et ordonnancement)",
+                    "Paramétrage des courbes de taux et fixings dans les SI avals",
+                    "Contractualisation avec les fournisseurs de données",
+                    "Interfaçages avec l'ensemble des applications du SI",
+                    "Stratégie de recette, tests, mise en production, VSR"
                   ]
                 },
                 {
-                  title: "Remplacement de la solution de téléphonies de marché",
+                  title: "Refonte d'interfaces des opérations financières — décommissionnement ETL DataStage",
                   tasks: [
-                    "Cadrage du besoin",
-                    "Expression de besoin",
+                    "Cadrage du besoin, spécifications fonctionnelles",
+                    "Paramétrages et déploiements",
+                    "Stratégie de recette, tests, mise en production, VSR",
+                    "Rédaction de la documentation"
+                  ]
+                },
+                {
+                  title: "Appel d'offres JOUE — remplacement téléphonies de marché",
+                  tasks: [
+                    "Cadrage et expression du besoin",
                     "Benchmark des solutions",
-                    "Rédaction du cahier des charges dans le cadre du lancement de l'appel d'offres au Journal Officiel de l'Union Européenne",
+                    "Rédaction du cahier des charges pour appel d'offres au Journal Officiel de l'Union Européenne",
                     "Aide à la prise de décision pour le choix de la solution cible"
                   ]
                 },
                 {
                   title: "Rationalisation des licences de la Salle des Marchés",
                   tasks: [
-                    "Revue contrats",
-                    "Collecte du besoins Métiers",
-                    "Revue du besoin et adaptation en terme de services à contractualiser"
+                    "Revue des contrats, collecte des besoins Métiers",
+                    "Adaptation des services à contractualiser"
                   ]
                 },
                 {
-                  title: "Suivi et accompagnement des audits CAC annuels",
+                  title: "Remplacement de la solution Credit Management",
+                  tasks: [
+                    "Benchmark des solutions",
+                    "Lancement d'un Request For Information (RFI)"
+                  ]
+                },
+                {
+                  title: "Déploiement des processus de gestion des habilitations",
+                  tasks: [
+                    "Revue des processus existants",
+                    "Mise en place de nouveaux workflows de validation",
+                    "Proposition de solutions d'automatisation"
+                  ]
+                },
+                {
+                  title: "Accompagnement des audits CAC annuels",
                   tasks: [
                     "Pilotage interne des demandes des auditeurs",
-                    "Mise à dispositions des livrables"
-                  ]
-                },
-                {
-                  title: "Déploiement de nouveaux processus de gestion et de revue des habilitations",
-                  tasks: [
-                    "Revue des processus d'habilitations",
-                    "Mise en place de nouveaux workflow validation des habilitations",
-                    "Proposition de solutions pour automatiser la gestion des habilitations"
-                  ]
-                },
-                {
-                  title: "Industrialisation des données de marché",
-                  tasks: [
-                    "Analyse du besoin",
-                    "Rédaction des spécifications technico-fonctionnelles",
-                    "Déploiement de la solution DataScope de Refinitiv (paramétrage et ordonnancement)",
-                    "Paramétrage des courbes de taux, fixings dans les SI avals",
-                    "Contractualisation avec les fournisseurs de données",
-                    "Interfaçages avec l'ensemble des applications du SI",
-                    "Stratégie de recette et tests",
-                    "Recette",
-                    "Mise en production et Vérification du Service Régulier"
-                  ]
-                },
-                {
-                  title: "Refonte d'interfaces des opérations financières dans le cadre du décommissionnement de l'ETL DataStage",
-                  tasks: [
-                    "Cadrage du besoin",
-                    "Rédaction des spécifications fonctionnelles",
-                    "Paramétrages et déploiements",
-                    "Stratégie de recette et tests",
-                    "Recette",
-                    "Mise en production et Vérification du Service Régulier",
-                    "Rédaction de la documentation"
-                  ]
-                }
-              ]
-            },
-            {
-              id: 6,
-              company: "Sodexo",
-              title: "Responsable applicatifs Facilities Management Qualité Tranverse",
-              period: "Octobre 2017 à Décembre 2017",
-              location: "Guyancourt (78)",
-              missions: [
-                {
-                  title: "Maintien en condition opérationnelle du SI",
-                  tasks: [
-                    "Pilotage et suivi de planning",
-                    "Animation des ateliers de travail entre les différents acteurs (MOA, éditeurs, Métiers)",
-                    "Animations hebdomadaires d'ateliers",
-                    "Recueil des besoins",
-                    "Rédaction d'expressions de besoins",
-                    "Implémentation (paramétrages technico-fonctionnel)",
-                    "Tests unitaires et de bout en bout",
-                    "Rédaction de plans de formations",
-                    "Rédaction de documentations",
-                    "Support N2",
-                    "Gestion du back log",
-                    "Suivi de la bonne application des SLA",
-                    "Suivi des livraisons (versions, patch...)",
-                    "Tests unitaires et de bout en bout des livraisons",
-                    "Validation des Mise en Production",
-                    "Mise en place de Vérification de Service Régulier"
+                    "Mise à disposition des livrables"
                   ]
                 }
               ]
@@ -882,48 +407,63 @@
             {
               id: 7,
               company: "SNCF Réseau",
-              title: "Consultant stagiaire AMOA SI département Etudes Finances et Gestion",
-              period: "Avril 2017 à Septembre 2017",
+              title: "Consultant AMOA SI | Beijaflore",
+              period: "Avril 2017 - Septembre 2017",
               location: "Saint-Denis (93)",
               missions: [
                 {
-                  title: "Pilotage et coordination projet",
-                  description: "Pilotage d'un projet de décommissionnement du SI amont comptable (JD Edwards et migration vers PeopleSoft) alimentant l'application de Credit Management « Wynbe »",
+                  title: "Décommissionnement SI comptable impactant le Credit Management",
+                  description: "Pilotage du projet de décommissionnement du SI amont comptable (JD Edwards → PeopleSoft) alimentant l'application de Credit Management Wynbe.",
                   tasks: [
-                    "Pilotage et coordination du projet multi-acteurs afin de respecter les jalons du planning",
-                    "Animation des instances projets (comités projets, comités de pilotage, points d'avancements)",
-                    "Rédaction d'expressions de besoins",
-                    "Stratégie de recette (cahier de recette, plan de charges)",
-                    "Recette et pilotage de la recette de bout en bout",
+                    "Pilotage et coordination multi-acteurs",
+                    "Animation des instances projet (comités projets, comités de pilotage)",
+                    "Stratégie de recette, recette de bout en bout",
                     "Conduite du changement et formations utilisateurs",
-                    "Suivi de la mise en production",
-                    "Vérification du service régulier"
+                    "Mise en production et vérification du service régulier"
                   ]
                 },
                 {
-                  title: "Accompagnement utilisateurs et veille réglementaire",
+                  title: "Veille réglementaire et documentation",
                   tasks: [
-                    "Rédaction d'un guide utilisateurs « Front to back » de l'application Titan Treasury",
-                    "Veille réglementaire (IFRS 9, EMIR) afin d'anticiper les évolutions impactant Titan Treasury"
+                    "Rédaction du guide utilisateur Front-to-Back TitanTreasury",
+                    "Veille réglementaire (IFRS 9, EMIR) pour anticiper les évolutions"
                   ]
                 }
               ]
             },
             {
               id: 8,
-              company: "American Express / Global Business Travel",
+              company: "Sodexo",
+              title: "Responsable Applicatifs FM | Beijaflore",
+              period: "Octobre 2017 - Décembre 2017",
+              location: "Guyancourt (78)",
+              missions: [
+                {
+                  title: "MCO et déploiement des solutions Facilities Management",
+                  description: "Périmètre applicatif : Premium, Premium SED, Portails Joomla, Urba.",
+                  tasks: [
+                    "Animation des ateliers, recueil des besoins, rédaction des expressions de besoin",
+                    "Paramétrages technico-fonctionnels, tests unitaires et de bout en bout",
+                    "Support N2, gestion du backlog, suivi des SLA",
+                    "Validation des mises en production, Vérification du Service Régulier",
+                    "Rédaction des plans de formation et documentation"
+                  ]
+                }
+              ]
+            },
+            {
+              id: 9,
+              company: "American Express Global Business Travel",
               title: "Assistant Project Manager",
-              period: "Avril 2016 à Septembre 2016",
+              period: "Avril 2016 - Septembre 2016",
               location: "Rueil-Malmaison (92)",
               missions: [
                 {
-                  title: "Organisation et planification d'évènements pour les leaders mondiaux des laboratoires pharmaceutiques",
+                  title: "Organisation d'événements internationaux pour Grands Comptes pharmaceutiques",
                   tasks: [
-                    "Pilotage et coordination des évènements à échelle internationale",
-                    "Recueil et analyse des besoins",
-                    "Négociation avec les parties prenantes",
-                    "Organisation des appels d'offres",
-                    "Logistique",
+                    "Pilotage et coordination à l'échelle internationale",
+                    "Recueil et analyse des besoins, négociation avec les parties prenantes",
+                    "Organisation des appels d'offres, logistique",
                     "Suivi des budgets et de la refacturation"
                   ]
                 }
@@ -932,26 +472,10 @@
           ];
 
           const education = [
-            {
-              degree: "Master 2 Systèmes d'information pour la finance de marché",
-              school: "Institut Mines Télécom (Business School) - Evry, France",
-              period: "2013-2017"
-            },
-            {
-              degree: "Mentor Language Institute",
-              school: "Los Angeles, Etats-Unis",
-              period: "2015-2016"
-            },
-            {
-              degree: "Classe Préparatoire aux Grandes Ecoles de Commerce ECT",
-              school: "Ecole Nationale de Commerce - Paris, France",
-              period: "2011-2013"
-            },
-            {
-              degree: "Baccalauréat STG option comptabilité et finance d'entreprise",
-              school: "Lycée Jean-Pierre Vernant - Sèvres, France",
-              period: "2010-2011"
-            }
+            { degree: "Master 2 Systèmes d'information pour la finance de marché", school: "Institut Mines Télécom (Business School) - Evry, France", period: "2013-2017" },
+            { degree: "Mentor Language Institute", school: "Los Angeles, États-Unis", period: "2015-2016" },
+            { degree: "Classe Préparatoire aux Grandes Écoles de Commerce ECT", school: "École Nationale de Commerce - Paris, France", period: "2011-2013" },
+            { degree: "Baccalauréat STG option Comptabilité et Finance d'Entreprise", school: "Lycée Jean-Pierre Vernant - Sèvres, France", period: "2010-2011" }
           ];
           
           const languages = [
@@ -968,82 +492,43 @@
 
           return (
             <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
-              {/* Header avec toggle dark mode */}
               <div className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border-b shadow-sm`}>
                 <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
                   <h1 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>YB</h1>
-                  <button
-                    onClick={() => setDarkMode(!darkMode)}
-                    className={`p-2 rounded-full ${darkMode ? 'bg-gray-700 text-yellow-400' : 'bg-gray-100 text-gray-600'} hover:scale-110 transition-transform`}
-                  >
+                  <button onClick={() => setDarkMode(!darkMode)} className={`p-2 rounded-full ${darkMode ? 'bg-gray-700 text-yellow-400' : 'bg-gray-100 text-gray-600'} hover:scale-110 transition-transform`}>
                     {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                   </button>
                 </div>
               </div>
 
               <div className="max-w-6xl mx-auto px-8 py-12">
-                {/* Hero Section */}
+                {/* Hero */}
                 <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-12 mb-8`}>
                   <div className="flex flex-col md:flex-row items-center gap-8">
                     <div className="relative">
                       <div className="w-40 h-40 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
-                        <img 
-                          src="https://raw.githubusercontent.com/yahys/CV/main/IMG_5847.jpg" 
-                          alt="Yahya BENABDELKRIM" 
-                          className="w-full h-full rounded-full object-cover"
-                        />
+                        <img src="https://raw.githubusercontent.com/yahys/CV/main/IMG_5847.jpg" alt="Yahya BENABDELKRIM" className="w-full h-full rounded-full object-cover" />
                       </div>
                       <div className="absolute -bottom-2 -right-2 bg-green-500 w-8 h-8 rounded-full border-4 border-white"></div>
                     </div>
-                    
                     <div className="flex-1 text-center md:text-left">
-                      <h1 className={`text-4xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                        Yahya BENABDELKRIM
-                      </h1>
-                      <p className="text-2xl text-blue-600 mb-4 font-medium">
-                        Directeur de projets & AMOA • Expert SI Finance & Trésorerie
-                      </p>
-                      
+                      <h1 className={`text-4xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Yahya BENABDELKRIM</h1>
+                      <p className="text-2xl text-blue-600 mb-1 font-medium">Consultant Freelance en Stratégie & Transformation SI</p>
+                      <p className={`text-lg mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Stratégie, PMO, Conduite du Changement | Finance & Innovation IA</p>
                       <div className={`flex flex-wrap gap-4 mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-600'} justify-center md:justify-start`}>
-                        <a href="tel:+33699233220" className="flex items-center gap-2 hover:text-blue-600 transition">
-                          <Phone className="w-4 h-4" />
-                          +33 6 99 23 32 20
-                        </a>
-                        <a href="mailto:benabdelkrim.yahya@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition">
-                          <Mail className="w-4 h-4" />
-                          benabdelkrim.yahya@gmail.com
-                        </a>
-                        <span className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4" />
-                          Boulogne-Billancourt
-                        </span>
+                        <a href="tel:+33699233220" className="flex items-center gap-2 hover:text-blue-600 transition"><Phone className="w-4 h-4" />+33 6 99 23 32 20</a>
+                        <a href="mailto:benabdelkrim.yahya@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition"><Mail className="w-4 h-4" />benabdelkrim.yahya@gmail.com</a>
+                        <span className="flex items-center gap-2"><MapPin className="w-4 h-4" />Boulogne-Billancourt</span>
                       </div>
-
                       <div className="flex gap-4 justify-center md:justify-start">
-                        <a 
-                          href="https://www.linkedin.com/in/yahyabenabdelkrim/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"
-                        >
-                          <Linkedin className="w-5 h-5" />
-                          LinkedIn
-                        </a>
-                        <button 
-                          onClick={handlePrintCV}
-                          className={`flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} rounded-lg transition font-medium`}
-                        >
-                          <Download className="w-5 h-5" />
-                          CV PDF
-                        </button>
+                        <a href="https://www.linkedin.com/in/yahyabenabdelkrim/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium"><Linkedin className="w-5 h-5" />LinkedIn</a>
+                        <button onClick={handlePrintCV} className={`flex items-center gap-2 px-6 py-3 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} rounded-lg transition font-medium`}><Download className="w-5 h-5" />CV PDF</button>
                       </div>
                     </div>
                   </div>
-
-                  {/* Stats */}
                   <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
-                    {stats.map((stat, index) => (
-                      <div key={index} className="text-center">
+                    {stats.map((stat, i) => (
+                      <div key={i} className="text-center">
                         <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
                         <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{stat.label}</div>
                       </div>
@@ -1053,160 +538,63 @@
 
                 {/* Compétences */}
                 <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8 mb-8`}>
-                  <div 
-                    className="flex items-center justify-between cursor-pointer mb-6"
-                    onClick={() => setSkillsExpanded(!skillsExpanded)}
-                  >
-                    <h2 className={`text-2xl font-bold flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                      <Code className="w-6 h-6 text-blue-600" />
-                      Compétences
-                    </h2>
+                  <div className="flex items-center justify-between cursor-pointer mb-6" onClick={() => setSkillsExpanded(!skillsExpanded)}>
+                    <h2 className={`text-2xl font-bold flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}><Code className="w-6 h-6 text-blue-600" />Compétences</h2>
                     <ChevronDown className={`w-6 h-6 ${darkMode ? 'text-gray-400' : 'text-gray-600'} transition-transform ${skillsExpanded ? 'rotate-180' : ''}`} />
                   </div>
-                  
                   {skillsExpanded && (
                     <div className="space-y-6">
-                      <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Gestion & Management</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skills.functional.map((skill, index) => (
-                            <span 
-                              key={index} 
-                              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                                darkMode 
-                                  ? 'bg-blue-900 text-blue-200' 
-                                  : 'bg-blue-50 text-blue-700'
-                              } hover:scale-105 transition-transform cursor-default`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
+                      {[
+                        { title: "Conseil & Stratégie", items: skills.strategy, color: "blue" },
+                        { title: "Finance de Marché", items: skills.finance, color: "green" },
+                        { title: "Transformation SI", items: skills.transformation, color: "purple" },
+                        { title: "Intelligence Artificielle", items: skills.ia, color: "pink" },
+                        { title: "Outils", items: skills.outils, color: "orange" }
+                      ].map((cat, ci) => (
+                        <div key={ci}>
+                          <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>{cat.title}</h3>
+                          <div className="flex flex-wrap gap-2">
+                            {cat.items.map((skill, si) => (
+                              <span key={si} className={`px-4 py-2 rounded-full text-sm font-medium ${darkMode ? `bg-${cat.color}-900 text-${cat.color}-200` : `bg-${cat.color}-50 text-${cat.color}-700`} hover:scale-105 transition-transform cursor-default`}>{skill}</span>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-
-                      <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Finance & Trésorerie</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skills.technical.finance.map((skill, index) => (
-                            <span 
-                              key={index} 
-                              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                                darkMode 
-                                  ? 'bg-green-900 text-green-200' 
-                                  : 'bg-green-50 text-green-700'
-                              } hover:scale-105 transition-transform cursor-default`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>IT & SI</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skills.technical.it.map((skill, index) => (
-                            <span 
-                              key={index} 
-                              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                                darkMode 
-                                  ? 'bg-purple-900 text-purple-200' 
-                                  : 'bg-purple-50 text-purple-700'
-                              } hover:scale-105 transition-transform cursor-default`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Intelligence Artificielle</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skills.technical.ia.map((skill, index) => (
-                            <span 
-                              key={index} 
-                              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                                darkMode 
-                                  ? 'bg-pink-900 text-pink-200' 
-                                  : 'bg-pink-50 text-pink-700'
-                              } hover:scale-105 transition-transform cursor-default`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      <div>
-                        <h3 className={`text-lg font-semibold mb-3 ${darkMode ? 'text-gray-200' : 'text-gray-700'}`}>Autres outils</h3>
-                        <div className="flex flex-wrap gap-2">
-                          {skills.technical.autres.map((skill, index) => (
-                            <span 
-                              key={index} 
-                              className={`px-4 py-2 rounded-full text-sm font-medium ${
-                                darkMode 
-                                  ? 'bg-orange-900 text-orange-200' 
-                                  : 'bg-orange-50 text-orange-700'
-                              } hover:scale-105 transition-transform cursor-default`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   )}
                 </div>
 
                 {/* Expériences */}
                 <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8 mb-8`}>
-                  <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                    <Briefcase className="w-6 h-6 text-blue-600" />
-                    Expériences Professionnelles
-                  </h2>
-                  
+                  <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}><Briefcase className="w-6 h-6 text-blue-600" />Expériences Professionnelles</h2>
                   <div className="space-y-4">
                     {experiences.map((exp) => (
-                      <div 
-                        key={exp.id} 
-                        className={`${darkMode ? 'bg-gray-700 hover:bg-gray-650' : 'bg-gray-50 hover:bg-gray-100'} rounded-xl p-6 transition-all cursor-pointer`}
-                        onClick={() => toggleExperience(exp.id)}
-                      >
+                      <div key={exp.id} className={`${darkMode ? 'bg-gray-700 hover:bg-gray-650' : 'bg-gray-50 hover:bg-gray-100'} rounded-xl p-6 transition-all cursor-pointer`} onClick={() => toggleExperience(exp.id)}>
                         <div className="flex justify-between items-start">
                           <div className="flex-1">
-                            <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-2`}>{exp.company}</h3>
-                            <p className={`text-lg mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>{exp.title}</p>
+                            <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'} mb-1`}>{exp.title}</h3>
+                            <p className={`text-lg mb-1 ${darkMode ? 'text-blue-400' : 'text-blue-600'} font-medium`}>{exp.company}</p>
                             <div className={`flex gap-4 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                               <span>📅 {exp.period}</span>
                               <span>📍 {exp.location}</span>
                             </div>
                           </div>
-                          <span className={`text-2xl ${darkMode ? 'text-gray-400' : 'text-gray-400'}`}>
-                            {expandedExperiences[exp.id] ? '−' : '+'}
-                          </span>
+                          <span className={`text-2xl ${darkMode ? 'text-gray-400' : 'text-gray-400'}`}>{expandedExperiences[exp.id] ? '−' : '+'}</span>
                         </div>
-                        
                         {expandedExperiences[exp.id] && (
                           <div className="mt-4 pt-4 border-t border-gray-300">
                             {exp.missions.map((mission, index) => (
                               <div key={index} className="mb-4">
                                 <h4 className={`font-semibold mb-2 ${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>{mission.title}</h4>
-                                {mission.description && (
-                                  <p className={`text-sm mb-3 italic ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{mission.description}</p>
-                                )}
+                                {mission.description && <p className={`text-sm mb-3 italic ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{mission.description}</p>}
                                 <ul className={`list-disc pl-5 space-y-1 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                                  {mission.tasks.map((task, taskIndex) => (
-                                    <li key={taskIndex}>{task}</li>
-                                  ))}
+                                  {mission.tasks.map((task, ti) => (<li key={ti}>{task}</li>))}
                                 </ul>
                                 {mission.useCases && (
                                   <div className="mt-3">
                                     <h5 className={`font-medium text-sm mb-2 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Cas d'usage :</h5>
                                     <ul className={`list-disc pl-5 space-y-1 text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                                      {mission.useCases.map((useCase, useCaseIndex) => (
-                                        <li key={useCaseIndex}>{useCase}</li>
-                                      ))}
+                                      {mission.useCases.map((uc, ui) => (<li key={ui}>{uc}</li>))}
                                     </ul>
                                   </div>
                                 )}
@@ -1221,15 +609,11 @@
 
                 {/* Formation et Langues */}
                 <div className="grid md:grid-cols-2 gap-8">
-                  {/* Formation */}
                   <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8`}>
-                    <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                      <GraduationCap className="w-6 h-6 text-blue-600" />
-                      Formation
-                    </h2>
+                    <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}><GraduationCap className="w-6 h-6 text-blue-600" />Formation</h2>
                     <div className="space-y-4">
-                      {education.map((edu, index) => (
-                        <div key={index} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
+                      {education.map((edu, i) => (
+                        <div key={i} className={`p-4 rounded-lg ${darkMode ? 'bg-gray-700' : 'bg-gray-50'}`}>
                           <h3 className={`font-bold ${darkMode ? 'text-blue-400' : 'text-blue-600'}`}>{edu.degree}</h3>
                           <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{edu.period}</p>
                           <p className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>{edu.school}</p>
@@ -1237,13 +621,8 @@
                       ))}
                     </div>
                   </div>
-
-                  {/* Langues */}
                   <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-2xl shadow-xl p-8`}>
-                    <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                      <Globe className="w-6 h-6 text-blue-600" />
-                      Langues
-                    </h2>
+                    <h2 className={`text-2xl font-bold mb-6 flex items-center gap-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}><Globe className="w-6 h-6 text-blue-600" />Langues</h2>
                     <div className="space-y-4">
                       {languages.map((item) => (
                         <div key={item.lang}>
@@ -1252,10 +631,7 @@
                             <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{item.level}</span>
                           </div>
                           <div className={`w-full h-2 rounded-full ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                            <div
-                              className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500"
-                              style={{ width: item.percent }}
-                            />
+                            <div className="h-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-500" style={{ width: item.percent }} />
                           </div>
                         </div>
                       ))}
@@ -1264,12 +640,9 @@
                 </div>
               </div>
 
-              {/* Footer */}
               <footer className={`${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border-t mt-12 py-8`}>
                 <div className="max-w-6xl mx-auto px-8 text-center">
-                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    © 2025 Yahya BENABDELKRIM - Tous droits réservés
-                  </p>
+                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>© 2025 Yahya BENABDELKRIM - Tous droits réservés</p>
                 </div>
               </footer>
             </div>
